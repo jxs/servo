@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::script_task::ScriptTask - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>script</a>&#8203;::<a href='index.html'>script_task</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.NewLayoutInfo.html'>NewLayoutInfo</a><a class='struct ' href='struct.ScriptChan.html'>ScriptChan</a><a class='struct current' href='struct.ScriptTask.html'>ScriptTask</a><a class='struct ' href='struct.StackRootTLS.html'>StackRootTLS</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'>Struct <a href='../index.html'>script</a>::<a href='index.html'>script_task</a>::<a class='struct' href=''>ScriptTask</a><a class='source' id='src-487510' href='../../src/script/home/travis/build/servo/servo/src/components/script/script_task.rs.html#134-159'>[src]</a></h1>
+<pre class='rust struct'>pub struct ScriptTask {
+    // some fields omitted
+}</pre><div class='docblock'><p>Information for an entire page. Pages are top-level browsing contexts and can contain multiple
+frames.</p>
+
+<p>FIXME: Rename to <code>Page</code>, following WebKit?</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../script/script_task/struct.ScriptTask.html' title='script::script_task::ScriptTask'>ScriptTask</a></code></h3><div class='methods'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(id: <a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, compositor: <a class='struct' href='http://doc.rust-lang.org/alloc/owned/struct.Box.html' title='alloc::owned::Box'>Box</a>&lt;<a class='trait' href='../../msg/compositor_msg/trait.ScriptListener.html' title='msg::compositor_msg::ScriptListener'>ScriptListener</a>&gt;, layout_chan: <a class='struct' href='../../script/layout_interface/struct.LayoutChan.html' title='script::layout_interface::LayoutChan'>LayoutChan</a>, port: <a class='struct' href='http://doc.rust-lang.org/sync/comm/struct.Receiver.html' title='sync::comm::Receiver'>Receiver</a>&lt;<a class='type' href='../../script/script_task/type.ScriptMsg.html' title='script::script_task::ScriptMsg'>ScriptMsg</a>&gt;, chan: <a class='struct' href='../../script/script_task/struct.ScriptChan.html' title='script::script_task::ScriptChan'>ScriptChan</a>, constellation_chan: <a class='struct' href='../../msg/constellation_msg/struct.ConstellationChan.html' title='msg::constellation_msg::ConstellationChan'>ConstellationChan</a>, resource_task: <a class='type' href='../../net/resource_task/type.ResourceTask.html' title='net::resource_task::ResourceTask'>ResourceTask</a>, img_cache_task: <a class='struct' href='../../net/image_cache_task/struct.ImageCacheTask.html' title='net::image_cache_task::ImageCacheTask'>ImageCacheTask</a>, window_size: <a class='struct' href='../../msg/constellation_msg/struct.WindowSizeData.html' title='msg::constellation_msg::WindowSizeData'>WindowSizeData</a>) -&gt; <a class='struct' href='http://doc.rust-lang.org/alloc/rc/struct.Rc.html' title='alloc::rc::Rc'>Rc</a>&lt;<a class='struct' href='../../script/script_task/struct.ScriptTask.html' title='script::script_task::ScriptTask'>ScriptTask</a>&gt;</code></h4>
+<div class='docblock'><p>Creates a new script task.</p>
+</div><h4 id='method.new_rt_and_cx' class='method'><code>fn <a href='#method.new_rt_and_cx' class='fnname'>new_rt_and_cx</a>() -&gt; <a href='http://doc.rust-lang.org/std/primitive.tuple.html'>(rt, <a class='struct' href='http://doc.rust-lang.org/alloc/rc/struct.Rc.html' title='alloc::rc::Rc'>Rc</a>&lt;Cx&gt;)</a></code></h4>
+<h4 id='method.get_cx' class='method'><code>fn <a href='#method.get_cx' class='fnname'>get_cx</a>(&amp;self) -&gt; *mut JSContext</code></h4>
+<h4 id='method.start' class='method'><code>fn <a href='#method.start' class='fnname'>start</a>(&amp;self)</code></h4>
+<div class='docblock'><p>Starts the script task. After calling this method, the script task will loop receiving
+messages on its port.</p>
+</div><h4 id='method.create' class='method'><code>fn <a href='#method.create' class='fnname'>create</a>&lt;C: <a class='trait' href='../../msg/compositor_msg/trait.ScriptListener.html' title='msg::compositor_msg::ScriptListener'>ScriptListener</a> + <a class='trait' href='http://doc.rust-lang.org/core/kinds/trait.Send.html' title='core::kinds::Send'>Send</a>&gt;(id: <a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, compositor: <a class='struct' href='http://doc.rust-lang.org/alloc/owned/struct.Box.html' title='alloc::owned::Box'>Box</a>&lt;C&gt;, layout_chan: <a class='struct' href='../../script/layout_interface/struct.LayoutChan.html' title='script::layout_interface::LayoutChan'>LayoutChan</a>, port: <a class='struct' href='http://doc.rust-lang.org/sync/comm/struct.Receiver.html' title='sync::comm::Receiver'>Receiver</a>&lt;<a class='type' href='../../script/script_task/type.ScriptMsg.html' title='script::script_task::ScriptMsg'>ScriptMsg</a>&gt;, chan: <a class='struct' href='../../script/script_task/struct.ScriptChan.html' title='script::script_task::ScriptChan'>ScriptChan</a>, constellation_chan: <a class='struct' href='../../msg/constellation_msg/struct.ConstellationChan.html' title='msg::constellation_msg::ConstellationChan'>ConstellationChan</a>, failure_msg: <a class='struct' href='../../msg/constellation_msg/struct.Failure.html' title='msg::constellation_msg::Failure'>Failure</a>, resource_task: <a class='type' href='../../net/resource_task/type.ResourceTask.html' title='net::resource_task::ResourceTask'>ResourceTask</a>, image_cache_task: <a class='struct' href='../../net/image_cache_task/struct.ImageCacheTask.html' title='net::image_cache_task::ImageCacheTask'>ImageCacheTask</a>, window_size: <a class='struct' href='../../msg/constellation_msg/struct.WindowSizeData.html' title='msg::constellation_msg::WindowSizeData'>WindowSizeData</a>)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The msg library documentation.">
+
+    <title>msg::constellation_msg::WindowSizeData - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>msg</a>&#8203;::<a href='index.html'>constellation_msg</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.ConstellationChan.html'>ConstellationChan</a><a class='struct ' href='struct.Failure.html'>Failure</a><a class='struct ' href='struct.PipelineId.html'>PipelineId</a><a class='struct ' href='struct.SubpageId.html'>SubpageId</a><a class='struct current' href='struct.WindowSizeData.html'>WindowSizeData</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'>Struct <a href='../index.html'>msg</a>::<a href='index.html'>constellation_msg</a>::<a class='struct' href=''>WindowSizeData</a><a class='source' id='src-987' href='../../src/msg/home/travis/build/servo/servo/src/components/msg/constellation_msg.rs.html#40-50'>[src]</a></h1>
+<pre class='rust struct'>pub struct WindowSizeData {
+    pub initial_viewport: TypedSize2D&lt;<a class='type' href='../../util/geometry/type.ViewportPx.html' title='util::geometry::ViewportPx'>ViewportPx</a>, <a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>&gt;,
+    pub visible_viewport: TypedSize2D&lt;<a class='type' href='../../util/geometry/type.PagePx.html' title='util::geometry::PagePx'>PagePx</a>, <a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>&gt;,
+    pub device_pixel_ratio: ScaleFactor&lt;<a class='type' href='../../util/geometry/type.ViewportPx.html' title='util::geometry::ViewportPx'>ViewportPx</a>, <a class='type' href='../../util/geometry/type.DevicePixel.html' title='util::geometry::DevicePixel'>DevicePixel</a>, <a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>&gt;,
+}</pre><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.initial_viewport'><code>initial_viewport</code></td><td><div class='docblock'><p>The size of the initial layout viewport, before parsing an
+<a href="http://www.w3.org/TR/css-device-adapt/#initial-viewport">http://www.w3.org/TR/css-device-adapt/#initial-viewport</a></p>
+</div></td></tr><tr><td id='structfield.visible_viewport'><code>visible_viewport</code></td><td><div class='docblock'><p>The &quot;viewing area&quot; in page px. See <code>PagePx</code> documentation for details.</p>
+</div></td></tr><tr><td id='structfield.device_pixel_ratio'><code>device_pixel_ratio</code></td><td><div class='docblock'><p>The resolution of the window in dppx, not including any &quot;pinch zoom&quot; factor.</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl&lt;__S: <a class='trait' href='http://doc.rust-lang.org/serialize/serialize/trait.Encoder.html' title='serialize::serialize::Encoder'>Encoder</a>&lt;__E&gt;, __E&gt; <a class='trait' href='http://doc.rust-lang.org/serialize/serialize/trait.Encodable.html' title='serialize::serialize::Encodable'>Encodable</a>&lt;__S, __E&gt; for <a class='struct' href='../../msg/constellation_msg/struct.WindowSizeData.html' title='msg::constellation_msg::WindowSizeData'>WindowSizeData</a></code></h3><div class='methods'><h4 id='method.encode' class='method'><code>fn <a href='#method.encode' class='fnname'>encode</a>(&amp;self, __arg_0: &amp;mut __S) -&gt; <a class='type' href='http://doc.rust-lang.org/core/result/type.Result.html' title='core::result::Result'>Result</a>&lt;(), __E&gt;</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "msg";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::htmlcollection - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>script</a>&#8203;::<a href='../index.html'>dom</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../attr/index.html'>attr</a><a class='mod ' href='../attrlist/index.html'>attrlist</a><a class='mod ' href='../bindings/index.html'>bindings</a><a class='mod ' href='../blob/index.html'>blob</a><a class='mod ' href='../browsercontext/index.html'>browsercontext</a><a class='mod ' href='../canvasrenderingcontext2d/index.html'>canvasrenderingcontext2d</a><a class='mod ' href='../characterdata/index.html'>characterdata</a><a class='mod ' href='../clientrect/index.html'>clientrect</a><a class='mod ' href='../clientrectlist/index.html'>clientrectlist</a><a class='mod ' href='../comment/index.html'>comment</a><a class='mod ' href='../console/index.html'>console</a><a class='mod ' href='../customevent/index.html'>customevent</a><a class='mod ' href='../dedicatedworkerglobalscope/index.html'>dedicatedworkerglobalscope</a><a class='mod ' href='../document/index.html'>document</a><a class='mod ' href='../documentfragment/index.html'>documentfragment</a><a class='mod ' href='../documenttype/index.html'>documenttype</a><a class='mod ' href='../domexception/index.html'>domexception</a><a class='mod ' href='../domimplementation/index.html'>domimplementation</a><a class='mod ' href='../domparser/index.html'>domparser</a><a class='mod ' href='../domtokenlist/index.html'>domtokenlist</a><a class='mod ' href='../element/index.html'>element</a><a class='mod ' href='../event/index.html'>event</a><a class='mod ' href='../eventdispatcher/index.html'>eventdispatcher</a><a class='mod ' href='../eventtarget/index.html'>eventtarget</a><a class='mod ' href='../file/index.html'>file</a><a class='mod ' href='../formdata/index.html'>formdata</a><a class='mod ' href='../htmlanchorelement/index.html'>htmlanchorelement</a><a class='mod ' href='../htmlappletelement/index.html'>htmlappletelement</a><a class='mod ' href='../htmlareaelement/index.html'>htmlareaelement</a><a class='mod ' href='../htmlaudioelement/index.html'>htmlaudioelement</a><a class='mod ' href='../htmlbaseelement/index.html'>htmlbaseelement</a><a class='mod ' href='../htmlbodyelement/index.html'>htmlbodyelement</a><a class='mod ' href='../htmlbrelement/index.html'>htmlbrelement</a><a class='mod ' href='../htmlbuttonelement/index.html'>htmlbuttonelement</a><a class='mod ' href='../htmlcanvaselement/index.html'>htmlcanvaselement</a><a class='mod current' href='../htmlcollection/index.html'>htmlcollection</a><a class='mod ' href='../htmldataelement/index.html'>htmldataelement</a><a class='mod ' href='../htmldatalistelement/index.html'>htmldatalistelement</a><a class='mod ' href='../htmldirectoryelement/index.html'>htmldirectoryelement</a><a class='mod ' href='../htmldivelement/index.html'>htmldivelement</a><a class='mod ' href='../htmldlistelement/index.html'>htmldlistelement</a><a class='mod ' href='../htmlelement/index.html'>htmlelement</a><a class='mod ' href='../htmlembedelement/index.html'>htmlembedelement</a><a class='mod ' href='../htmlfieldsetelement/index.html'>htmlfieldsetelement</a><a class='mod ' href='../htmlfontelement/index.html'>htmlfontelement</a><a class='mod ' href='../htmlformelement/index.html'>htmlformelement</a><a class='mod ' href='../htmlframeelement/index.html'>htmlframeelement</a><a class='mod ' href='../htmlframesetelement/index.html'>htmlframesetelement</a><a class='mod ' href='../htmlheadelement/index.html'>htmlheadelement</a><a class='mod ' href='../htmlheadingelement/index.html'>htmlheadingelement</a><a class='mod ' href='../htmlhrelement/index.html'>htmlhrelement</a><a class='mod ' href='../htmlhtmlelement/index.html'>htmlhtmlelement</a><a class='mod ' href='../htmliframeelement/index.html'>htmliframeelement</a><a class='mod ' href='../htmlimageelement/index.html'>htmlimageelement</a><a class='mod ' href='../htmlinputelement/index.html'>htmlinputelement</a><a class='mod ' href='../htmllabelelement/index.html'>htmllabelelement</a><a class='mod ' href='../htmllegendelement/index.html'>htmllegendelement</a><a class='mod ' href='../htmllielement/index.html'>htmllielement</a><a class='mod ' href='../htmllinkelement/index.html'>htmllinkelement</a><a class='mod ' href='../htmlmapelement/index.html'>htmlmapelement</a><a class='mod ' href='../htmlmediaelement/index.html'>htmlmediaelement</a><a class='mod ' href='../htmlmetaelement/index.html'>htmlmetaelement</a><a class='mod ' href='../htmlmeterelement/index.html'>htmlmeterelement</a><a class='mod ' href='../htmlmodelement/index.html'>htmlmodelement</a><a class='mod ' href='../htmlobjectelement/index.html'>htmlobjectelement</a><a class='mod ' href='../htmlolistelement/index.html'>htmlolistelement</a><a class='mod ' href='../htmloptgroupelement/index.html'>htmloptgroupelement</a><a class='mod ' href='../htmloptionelement/index.html'>htmloptionelement</a><a class='mod ' href='../htmloutputelement/index.html'>htmloutputelement</a><a class='mod ' href='../htmlparagraphelement/index.html'>htmlparagraphelement</a><a class='mod ' href='../htmlparamelement/index.html'>htmlparamelement</a><a class='mod ' href='../htmlpreelement/index.html'>htmlpreelement</a><a class='mod ' href='../htmlprogresselement/index.html'>htmlprogresselement</a><a class='mod ' href='../htmlquoteelement/index.html'>htmlquoteelement</a><a class='mod ' href='../htmlscriptelement/index.html'>htmlscriptelement</a><a class='mod ' href='../htmlselectelement/index.html'>htmlselectelement</a><a class='mod ' href='../htmlserializer/index.html'>htmlserializer</a><a class='mod ' href='../htmlsourceelement/index.html'>htmlsourceelement</a><a class='mod ' href='../htmlspanelement/index.html'>htmlspanelement</a><a class='mod ' href='../htmlstyleelement/index.html'>htmlstyleelement</a><a class='mod ' href='../htmltablecaptionelement/index.html'>htmltablecaptionelement</a><a class='mod ' href='../htmltablecellelement/index.html'>htmltablecellelement</a><a class='mod ' href='../htmltablecolelement/index.html'>htmltablecolelement</a><a class='mod ' href='../htmltabledatacellelement/index.html'>htmltabledatacellelement</a><a class='mod ' href='../htmltableelement/index.html'>htmltableelement</a><a class='mod ' href='../htmltableheadercellelement/index.html'>htmltableheadercellelement</a><a class='mod ' href='../htmltablerowelement/index.html'>htmltablerowelement</a><a class='mod ' href='../htmltablesectionelement/index.html'>htmltablesectionelement</a><a class='mod ' href='../htmltemplateelement/index.html'>htmltemplateelement</a><a class='mod ' href='../htmltextareaelement/index.html'>htmltextareaelement</a><a class='mod ' href='../htmltimeelement/index.html'>htmltimeelement</a><a class='mod ' href='../htmltitleelement/index.html'>htmltitleelement</a><a class='mod ' href='../htmltrackelement/index.html'>htmltrackelement</a><a class='mod ' href='../htmlulistelement/index.html'>htmlulistelement</a><a class='mod ' href='../htmlunknownelement/index.html'>htmlunknownelement</a><a class='mod ' href='../htmlvideoelement/index.html'>htmlvideoelement</a><a class='mod ' href='../location/index.html'>location</a><a class='mod ' href='../messageevent/index.html'>messageevent</a><a class='mod ' href='../mouseevent/index.html'>mouseevent</a><a class='mod ' href='../navigator/index.html'>navigator</a><a class='mod ' href='../node/index.html'>node</a><a class='mod ' href='../nodelist/index.html'>nodelist</a><a class='mod ' href='../performance/index.html'>performance</a><a class='mod ' href='../performancetiming/index.html'>performancetiming</a><a class='mod ' href='../processinginstruction/index.html'>processinginstruction</a><a class='mod ' href='../progressevent/index.html'>progressevent</a><a class='mod ' href='../screen/index.html'>screen</a><a class='mod ' href='../testbinding/index.html'>testbinding</a><a class='mod ' href='../text/index.html'>text</a><a class='mod ' href='../types/index.html'>types</a><a class='mod ' href='../uievent/index.html'>uievent</a><a class='mod ' href='../urlsearchparams/index.html'>urlsearchparams</a><a class='mod ' href='../validitystate/index.html'>validitystate</a><a class='mod ' href='../virtualmethods/index.html'>virtualmethods</a><a class='mod ' href='../window/index.html'>window</a><a class='mod ' href='../worker/index.html'>worker</a><a class='mod ' href='../workerglobalscope/index.html'>workerglobalscope</a><a class='mod ' href='../xmlhttprequest/index.html'>xmlhttprequest</a><a class='mod ' href='../xmlhttprequesteventtarget/index.html'>xmlhttprequesteventtarget</a><a class='mod ' href='../xmlhttprequestupload/index.html'>xmlhttprequestupload</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'>Module <a href='../../index.html'>script</a>::<a href='../index.html'>dom</a>::<a class='mod' href=''>htmlcollection</a><a class='source' id='src-432175' href='../../../src/script/home/travis/build/servo/servo/src/components/script/dom/htmlcollection.rs.html#5-209'>[src]</a></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='struct' href='struct.HTMLCollection.html'
+                               title='script::dom::htmlcollection::HTMLCollection'>HTMLCollection</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr>
+                        <td><a class='type' href='type.CollectionTypeId.html'
+                               title='script::dom::htmlcollection::CollectionTypeId'>CollectionTypeId</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                    <tr>
+                        <td><a class='trait' href='trait.CollectionFilter.html'
+                               title='script::dom::htmlcollection::CollectionFilter'>CollectionFilter</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script async src="../../../search-index.js"></script>
+</body>
+</html>

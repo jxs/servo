@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::bindings::utils - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>script</a>&#8203;::<a href='../../index.html'>dom</a>&#8203;::<a href='../index.html'>bindings</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../callback/index.html'>callback</a><a class='mod ' href='../codegen/index.html'>codegen</a><a class='mod ' href='../conversions/index.html'>conversions</a><a class='mod ' href='../error/index.html'>error</a><a class='mod ' href='../global/index.html'>global</a><a class='mod ' href='../js/index.html'>js</a><a class='mod ' href='../str/index.html'>str</a><a class='mod ' href='../trace/index.html'>trace</a><a class='mod current' href='../utils/index.html'>utils</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'>Module <a href='../../../index.html'>script</a>::<a href='../../index.html'>dom</a>::<a href='../index.html'>bindings</a>::<a class='mod' href=''>utils</a><a class='source' id='src-4225' href='../../../../src/script/home/travis/build/servo/servo/src/components/script/dom/bindings/utils.rs.html#5-766'>[src]</a></h1>
+<div class='docblock'><p>Various utilities to glue JavaScript and the DOM implementation together.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='struct' href='struct.ConstantSpec.html'
+                               title='script::dom::bindings::utils::ConstantSpec'>ConstantSpec</a></td>
+                        <td class='docblock short'><p>Representation of an IDL constant.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.DOMClass.html'
+                               title='script::dom::bindings::utils::DOMClass'>DOMClass</a></td>
+                        <td class='docblock short'><p>The struct that holds inheritance information for DOM object reflectors.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.DOMJSClass.html'
+                               title='script::dom::bindings::utils::DOMJSClass'>DOMJSClass</a></td>
+                        <td class='docblock short'><p>The JSClass used for DOM object reflectors.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.GlobalStaticData.html'
+                               title='script::dom::bindings::utils::GlobalStaticData'>GlobalStaticData</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.NativeProperties.html'
+                               title='script::dom::bindings::utils::NativeProperties'>NativeProperties</a></td>
+                        <td class='docblock short'><p>Contains references to lists of methods, attributes, and constants for a
+given interface.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.Reflector.html'
+                               title='script::dom::bindings::utils::Reflector'>Reflector</a></td>
+                        <td class='docblock short'><p>A struct to store a reference to the reflector of a DOM object.</p>
+</td>
+                    </tr>
+                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr>
+                        <td><a class='type' href='type.ConstantVal.html'
+                               title='script::dom::bindings::utils::ConstantVal'>ConstantVal</a></td>
+                        <td class='docblock short'><p>Representation of an IDL constant value.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='type' href='type.XMLName.html'
+                               title='script::dom::bindings::utils::XMLName'>XMLName</a></td>
+                        <td class='docblock short'><p>Results of <code>xml_name_type</code>.</p>
+</td>
+                    </tr>
+                </table><h2 id='statics' class='section-header'><a href="#statics">Statics</a></h2>
+<table>
+                    <tr>
+                        <td><code>pub static DOM_OBJECT_SLOT: <a href='http://doc.rust-lang.org/std/primitive.uint.html'>uint</a></code><code> = </code><code>0</code></td>
+                        <td class='docblock'><p>The index of the slot wherein a pointer to the reflected DOM object is
+stored for non-proxy bindings.</p>
+&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>pub static DOM_PROTOTYPE_SLOT: <a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a></code><code> = </code><code>js::JSCLASS_GLOBAL_SLOT_COUNT</code></td>
+                        <td class='docblock'><p>The index of the slot that contains a reference to the ProtoOrIfaceArray.</p>
+&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>pub static JSCLASS_DOM_GLOBAL: <a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a></code><code> = </code><code>js::JSCLASS_USERBIT1</code></td>
+                        <td class='docblock'><p>The flag set on the <code>JSClass</code>es for DOM global objects.</p>
+&nbsp;</td>
+                    </tr>
+                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                    <tr>
+                        <td><a class='trait' href='trait.Reflectable.html'
+                               title='script::dom::bindings::utils::Reflectable'>Reflectable</a></td>
+                        <td class='docblock short'><p>A trait to provide access to the <code>Reflector</code> for a DOM object.</p>
+</td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='fn' href='fn.CreateDOMGlobal.html'
+                               title='script::dom::bindings::utils::CreateDOMGlobal'>CreateDOMGlobal</a></td>
+                        <td class='docblock short'><p>Create a DOM global object with the given class.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.CreateInterfaceObjects2.html'
+                               title='script::dom::bindings::utils::CreateInterfaceObjects2'>CreateInterfaceObjects2</a></td>
+                        <td class='docblock short'><p>Creates the <em>interface prototype object</em> and the <em>interface object</em> (if
+needed).
+Fails on JSAPI failure.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.FindEnumStringIndex.html'
+                               title='script::dom::bindings::utils::FindEnumStringIndex'>FindEnumStringIndex</a></td>
+                        <td class='docblock short'><p>Find the index of a string given by <code>v</code> in <code>values</code>.
+Returns <code>Err(())</code> on JSAPI failure (there is a pending exception), and
+<code>Ok(None)</code> if there was no matching string.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.GetArrayIndexFromId.html'
+                               title='script::dom::bindings::utils::GetArrayIndexFromId'>GetArrayIndexFromId</a></td>
+                        <td class='docblock short'><p>Get an array index from the given <code>jsid</code>. Returns <code>None</code> if the given
+<code>jsid</code> is not an integer.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.GetPropertyOnPrototype.html'
+                               title='script::dom::bindings::utils::GetPropertyOnPrototype'>GetPropertyOnPrototype</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.GetProtoOrIfaceArray.html'
+                               title='script::dom::bindings::utils::GetProtoOrIfaceArray'>GetProtoOrIfaceArray</a></td>
+                        <td class='docblock short'><p>Returns the ProtoOrIfaceArray for the given global object.
+Fails if <code>global</code> is not a DOM global object.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.GlobalStaticData.html'
+                               title='script::dom::bindings::utils::GlobalStaticData'>GlobalStaticData</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.HasPropertyOnPrototype.html'
+                               title='script::dom::bindings::utils::HasPropertyOnPrototype'>HasPropertyOnPrototype</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.IsConvertibleToCallbackInterface.html'
+                               title='script::dom::bindings::utils::IsConvertibleToCallbackInterface'>IsConvertibleToCallbackInterface</a></td>
+                        <td class='docblock short'><p>Returns whether <code>obj</code> can be converted to a callback interface per IDL.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.ThrowingConstructor.html'
+                               title='script::dom::bindings::utils::ThrowingConstructor'>ThrowingConstructor</a></td>
+                        <td class='docblock short'><p>A throwing constructor, for those interfaces that have neither
+<code>NoInterfaceObject</code> nor <code>Constructor</code>.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.cx_for_dom_object.html'
+                               title='script::dom::bindings::utils::cx_for_dom_object'>cx_for_dom_object</a></td>
+                        <td class='docblock short'><p>Get the <code>JSContext</code> for the <code>JSRuntime</code> associated with the thread
+this DOM object is on.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.dom_object_slot.html'
+                               title='script::dom::bindings::utils::dom_object_slot'>dom_object_slot</a></td>
+                        <td class='docblock short'><p>Returns the index of the slot wherein a pointer to the reflected DOM object
+is stored.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.get_dictionary_property.html'
+                               title='script::dom::bindings::utils::get_dictionary_property'>get_dictionary_property</a></td>
+                        <td class='docblock short'><p>Get the property with name <code>property</code> from <code>object</code>.
+Returns <code>Err(())</code> on JSAPI failure (there is a pending exception), and
+<code>Ok(None)</code> if there was no property with the given name.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.get_dom_class.html'
+                               title='script::dom::bindings::utils::get_dom_class'>get_dom_class</a></td>
+                        <td class='docblock short'><p>Get the <code>DOMClass</code> from <code>obj</code>, or <code>Err(())</code> if <code>obj</code> is not a DOM object.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.global_object_for_js_object.html'
+                               title='script::dom::bindings::utils::global_object_for_js_object'>global_object_for_js_object</a></td>
+                        <td class='docblock short'><p>Returns the global object of the realm that the given JS object was created in.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.initialize_global.html'
+                               title='script::dom::bindings::utils::initialize_global'>initialize_global</a></td>
+                        <td class='docblock short'><p>Construct and cache the ProtoOrIfaceArray for the given global.
+Fails if the argument is not a DOM global.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.is_dom_proxy.html'
+                               title='script::dom::bindings::utils::is_dom_proxy'>is_dom_proxy</a></td>
+                        <td class='docblock short'><p>Returns whether <code>obj</code> is a DOM object implemented as a proxy.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.jsid_to_str.html'
+                               title='script::dom::bindings::utils::jsid_to_str'>jsid_to_str</a></td>
+                        <td class='docblock short'><p>Convert the given <code>jsid</code> to a <code>DOMString</code>. Fails if the <code>jsid</code> is not a
+string, or if the string does not contain valid UTF-16.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.jsstring_to_str.html'
+                               title='script::dom::bindings::utils::jsstring_to_str'>jsstring_to_str</a></td>
+                        <td class='docblock short'><p>Convert the given <code>JSString</code> to a <code>DOMString</code>. Fails if the string does not
+contain valid UTF-16.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.outerize_global.html'
+                               title='script::dom::bindings::utils::outerize_global'>outerize_global</a></td>
+                        <td class='docblock short'><p>Callback to outerize windows.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.pre_wrap.html'
+                               title='script::dom::bindings::utils::pre_wrap'>pre_wrap</a></td>
+                        <td class='docblock short'><p>Callback to outerize windows before wrapping.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.reflect_dom_object.html'
+                               title='script::dom::bindings::utils::reflect_dom_object'>reflect_dom_object</a></td>
+                        <td class='docblock short'><p>Create the reflector for a new DOM object and yield ownership to the
+reflector.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.squirrel_away_unique.html'
+                               title='script::dom::bindings::utils::squirrel_away_unique'>squirrel_away_unique</a></td>
+                        <td class='docblock short'><p>Leak the given pointer.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.unwrap.html'
+                               title='script::dom::bindings::utils::unwrap'>unwrap</a></td>
+                        <td class='docblock short'><p>Get the DOM object from the given reflector.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.unwrap_jsmanaged.html'
+                               title='script::dom::bindings::utils::unwrap_jsmanaged'>unwrap_jsmanaged</a></td>
+                        <td class='docblock short'><p>Get a <code>JS&lt;T&gt;</code> for the given DOM object, unwrapping any wrapper around it
+first, and checking if the object is of the correct type.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.wrap_for_same_compartment.html'
+                               title='script::dom::bindings::utils::wrap_for_same_compartment'>wrap_for_same_compartment</a></td>
+                        <td class='docblock short'><p>Callback to outerize windows when wrapping.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.xml_name_type.html'
+                               title='script::dom::bindings::utils::xml_name_type'>xml_name_type</a></td>
+                        <td class='docblock short'><p>Check if an element name is valid. See <a href="http://www.w3.org/TR/xml/#NT-Name">http://www.w3.org/TR/xml/#NT-Name</a>
+for details.</p>
+</td>
+                    </tr>
+                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='type' href='type.NonNullJSNative.html'
+                               title='script::dom::bindings::utils::NonNullJSNative'>NonNullJSNative</a></td>
+                        <td class='docblock short'><p>A JSNative that cannot be null.</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    
+    <script async src="../../../../search-index.js"></script>
+</body>
+</html>

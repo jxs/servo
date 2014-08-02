@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The util library documentation.">
+
+    <title>util::cache::SimpleHashCache - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>util</a>&#8203;::<a href='index.html'>cache</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.HashCache.html'>HashCache</a><a class='struct ' href='struct.LRUCache.html'>LRUCache</a><a class='struct ' href='struct.MonoCache.html'>MonoCache</a><a class='struct current' href='struct.SimpleHashCache.html'>SimpleHashCache</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.Cache.html'>Cache</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'>Struct <a href='../index.html'>util</a>::<a href='index.html'>cache</a>::<a class='struct' href=''>SimpleHashCache</a><a class='source' id='src-938' href='../../src/util/home/travis/build/servo/servo/src/components/util/cache.rs.html#180-184'>[src]</a></h1>
+<pre class='rust struct'>pub struct SimpleHashCache&lt;K, V&gt; {
+    // some fields omitted
+}</pre><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;K: <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> + <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> + <a class='trait' href='http://doc.rust-lang.org/collections/hash/trait.Hash.html' title='collections::hash::Hash'>Hash</a>, V: <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a>&gt; <a class='struct' href='../../util/cache/struct.SimpleHashCache.html' title='util::cache::SimpleHashCache'>SimpleHashCache</a>&lt;K, V&gt;</code></h3><div class='methods'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(cache_size: <a href='http://doc.rust-lang.org/std/primitive.uint.html'>uint</a>) -&gt; <a class='struct' href='../../util/cache/struct.SimpleHashCache.html' title='util::cache::SimpleHashCache'>SimpleHashCache</a>&lt;K, V&gt;</code></h4>
+<h4 id='method.find_equiv' class='method'><code>fn <a href='#method.find_equiv' class='fnname'>find_equiv</a>&lt;'a, Q: <a class='trait' href='http://doc.rust-lang.org/collections/hash/trait.Hash.html' title='collections::hash::Hash'>Hash</a> + <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.Equiv.html' title='core::cmp::Equiv'>Equiv</a>&lt;K&gt;&gt;(&amp;'a self, key: &amp;Q) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a V&gt;</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;K: <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> + <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> + <a class='trait' href='http://doc.rust-lang.org/collections/hash/trait.Hash.html' title='collections::hash::Hash'>Hash</a>, V: <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a>&gt; <a class='trait' href='../../util/cache/trait.Cache.html' title='util::cache::Cache'>Cache</a>&lt;K, V&gt; for <a class='struct' href='../../util/cache/struct.SimpleHashCache.html' title='util::cache::SimpleHashCache'>SimpleHashCache</a>&lt;K, V&gt;</code></h3><div class='methods'><h4 id='method.insert' class='method'><code>fn <a href='#method.insert' class='fnname'>insert</a>(&amp;mut self, key: K, value: V)</code></h4>
+<h4 id='method.find' class='method'><code>fn <a href='#method.find' class='fnname'>find</a>(&amp;mut self, key: &amp;K) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;V&gt;</code></h4>
+<h4 id='method.find_or_create' class='method'><code>fn <a href='#method.find_or_create' class='fnname'>find_or_create</a>(&amp;mut self, key: &amp;K, blk: |&amp;K| -&gt; V) -&gt; V</code></h4>
+<h4 id='method.evict_all' class='method'><code>fn <a href='#method.evict_all' class='fnname'>evict_all</a>(&amp;mut self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "util";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

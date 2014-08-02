@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::bindings::utils::ConstantVal - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>script</a>&#8203;::<a href='../../index.html'>dom</a>&#8203;::<a href='../index.html'>bindings</a>&#8203;::<a href='index.html'>utils</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.ConstantSpec.html'>ConstantSpec</a><a class='struct ' href='struct.DOMClass.html'>DOMClass</a><a class='struct ' href='struct.DOMJSClass.html'>DOMJSClass</a><a class='struct ' href='struct.GlobalStaticData.html'>GlobalStaticData</a><a class='struct ' href='struct.NativeProperties.html'>NativeProperties</a><a class='struct ' href='struct.Reflector.html'>Reflector</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.Reflectable.html'>Reflectable</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.CreateDOMGlobal.html'>CreateDOMGlobal</a><a class='fn ' href='fn.CreateInterfaceObjects2.html'>CreateInterfaceObjects2</a><a class='fn ' href='fn.FindEnumStringIndex.html'>FindEnumStringIndex</a><a class='fn ' href='fn.GetArrayIndexFromId.html'>GetArrayIndexFromId</a><a class='fn ' href='fn.GetPropertyOnPrototype.html'>GetPropertyOnPrototype</a><a class='fn ' href='fn.GetProtoOrIfaceArray.html'>GetProtoOrIfaceArray</a><a class='fn ' href='fn.GlobalStaticData.html'>GlobalStaticData</a><a class='fn ' href='fn.HasPropertyOnPrototype.html'>HasPropertyOnPrototype</a><a class='fn ' href='fn.IsConvertibleToCallbackInterface.html'>IsConvertibleToCallbackInterface</a><a class='fn ' href='fn.ThrowingConstructor.html'>ThrowingConstructor</a><a class='fn ' href='fn.cx_for_dom_object.html'>cx_for_dom_object</a><a class='fn ' href='fn.dom_object_slot.html'>dom_object_slot</a><a class='fn ' href='fn.get_dictionary_property.html'>get_dictionary_property</a><a class='fn ' href='fn.get_dom_class.html'>get_dom_class</a><a class='fn ' href='fn.global_object_for_js_object.html'>global_object_for_js_object</a><a class='fn ' href='fn.initialize_global.html'>initialize_global</a><a class='fn ' href='fn.is_dom_proxy.html'>is_dom_proxy</a><a class='fn ' href='fn.jsid_to_str.html'>jsid_to_str</a><a class='fn ' href='fn.jsstring_to_str.html'>jsstring_to_str</a><a class='fn ' href='fn.outerize_global.html'>outerize_global</a><a class='fn ' href='fn.pre_wrap.html'>pre_wrap</a><a class='fn ' href='fn.reflect_dom_object.html'>reflect_dom_object</a><a class='fn ' href='fn.squirrel_away_unique.html'>squirrel_away_unique</a><a class='fn ' href='fn.unwrap.html'>unwrap</a><a class='fn ' href='fn.unwrap_jsmanaged.html'>unwrap_jsmanaged</a><a class='fn ' href='fn.wrap_for_same_compartment.html'>wrap_for_same_compartment</a><a class='fn ' href='fn.xml_name_type.html'>xml_name_type</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content type">
+<h1 class='fqn'>Enum <a href='../../../index.html'>script</a>::<a href='../../index.html'>dom</a>::<a href='../index.html'>bindings</a>::<a href='index.html'>utils</a>::<a class='type' href=''>ConstantVal</a><a class='source' id='src-5874' href='../../../../src/script/home/travis/build/servo/servo/src/components/script/dom/bindings/utils.rs.html#209-216'>[src]</a></h1>
+<pre class='rust enum'>pub enum ConstantVal {
+    IntVal(<a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>),
+    UintVal(<a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a>),
+    DoubleVal(<a href='http://doc.rust-lang.org/std/primitive.f64.html'>f64</a>),
+    BoolVal(<a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a>),
+    NullVal,
+    VoidVal,
+}</pre><div class='docblock'><p>Representation of an IDL constant value.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.IntVal'><code>IntVal</code></td><td></td></tr><tr><td id='variant.UintVal'><code>UintVal</code></td><td></td></tr><tr><td id='variant.DoubleVal'><code>DoubleVal</code></td><td></td></tr><tr><td id='variant.BoolVal'><code>BoolVal</code></td><td></td></tr><tr><td id='variant.NullVal'><code>NullVal</code></td><td></td></tr><tr><td id='variant.VoidVal'><code>VoidVal</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='type' href='../../../../script/dom/bindings/utils/type.ConstantVal.html' title='script::dom::bindings::utils::ConstantVal'>ConstantVal</a></code></h3><div class='methods'><h4 id='method.clone' class='method'><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='type' href='../../../../script/dom/bindings/utils/type.ConstantVal.html' title='script::dom::bindings::utils::ConstantVal'>ConstantVal</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    
+    <script async src="../../../../search-index.js"></script>
+</body>
+</html>

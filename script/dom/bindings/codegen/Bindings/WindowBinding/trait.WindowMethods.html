@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::bindings::codegen::Bindings::WindowBinding::WindowMethods - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../../../../index.html'>script</a>&#8203;::<a href='../../../../index.html'>dom</a>&#8203;::<a href='../../../index.html'>bindings</a>&#8203;::<a href='../../index.html'>codegen</a>&#8203;::<a href='../index.html'>Bindings</a>&#8203;::<a href='index.html'>WindowBinding</a></p><div class='block trait'><h2>Traits</h2><a class='trait current' href='trait.WindowMethods.html'>WindowMethods</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.DefineDOMInterface.html'>DefineDOMInterface</a><a class='fn ' href='fn.GetProtoObject.html'>GetProtoObject</a><a class='fn ' href='fn.Wrap.html'>Wrap</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'>Trait <a href='../../../../../index.html'>script</a>::<a href='../../../../index.html'>dom</a>::<a href='../../../index.html'>bindings</a>::<a href='../../index.html'>codegen</a>::<a href='../index.html'>Bindings</a>::<a href='index.html'>WindowBinding</a>::<a class='trait' href=''>WindowMethods</a><a class='source' id='src-350430' href='../../../../../../src/script/home/travis/build/servo/servo/src/components/script/dom/bindings/codegen/Bindings/WindowBinding.rs.html#984-1010'>[src]</a></h1>
+<pre class='rust trait'>pub trait WindowMethods {
+    fn <a href='#tymethod.Window' class='fnname'>Window</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;;
+    fn <a href='#tymethod.Self' class='fnname'>Self</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;;
+    fn <a href='#tymethod.Document' class='fnname'>Document</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/document/struct.Document.html' title='script::dom::document::Document'>Document</a>&gt;;
+    fn <a href='#tymethod.Location' class='fnname'>Location</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/location/struct.Location.html' title='script::dom::location::Location'>Location</a>&gt;;
+    fn <a href='#tymethod.Close' class='fnname'>Close</a>(&amp;self);
+    fn <a href='#tymethod.Parent' class='fnname'>Parent</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;;
+    fn <a href='#tymethod.Navigator' class='fnname'>Navigator</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/navigator/struct.Navigator.html' title='script::dom::navigator::Navigator'>Navigator</a>&gt;;
+    fn <a href='#tymethod.Alert' class='fnname'>Alert</a>(&amp;self, message: <a class='type' href='../../../../../../util/str/type.DOMString.html' title='util::str::DOMString'>DOMString</a>);
+    fn <a href='#tymethod.Performance' class='fnname'>Performance</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/performance/struct.Performance.html' title='script::dom::performance::Performance'>Performance</a>&gt;;
+    fn <a href='#tymethod.Screen' class='fnname'>Screen</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/screen/struct.Screen.html' title='script::dom::screen::Screen'>Screen</a>&gt;;
+    fn <a href='#tymethod.Console' class='fnname'>Console</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/console/struct.Console.html' title='script::dom::console::Console'>Console</a>&gt;;
+    fn <a href='#tymethod.Debug' class='fnname'>Debug</a>(&amp;self, arg: <a class='type' href='../../../../../../util/str/type.DOMString.html' title='util::str::DOMString'>DOMString</a>);
+    fn <a href='#tymethod.Gc' class='fnname'>Gc</a>(&amp;self);
+    fn <a href='#tymethod.GetOnclick' class='fnname'>GetOnclick</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;;
+    fn <a href='#tymethod.SetOnclick' class='fnname'>SetOnclick</a>(&amp;self, value: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;);
+    fn <a href='#tymethod.GetOnload' class='fnname'>GetOnload</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;;
+    fn <a href='#tymethod.SetOnload' class='fnname'>SetOnload</a>(&amp;self, value: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;);
+    fn <a href='#tymethod.GetOnerror' class='fnname'>GetOnerror</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.OnErrorEventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::OnErrorEventHandlerNonNull'>OnErrorEventHandlerNonNull</a>&gt;;
+    fn <a href='#tymethod.SetOnerror' class='fnname'>SetOnerror</a>(&amp;self, value: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.OnErrorEventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::OnErrorEventHandlerNonNull'>OnErrorEventHandlerNonNull</a>&gt;);
+    fn <a href='#tymethod.GetOnunload' class='fnname'>GetOnunload</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;;
+    fn <a href='#tymethod.SetOnunload' class='fnname'>SetOnunload</a>(&amp;self, value: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;);
+    fn <a href='#tymethod.SetTimeout' class='fnname'>SetTimeout</a>(&amp;self, cx: *mut JSContext, handler: JSVal, timeout: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>;
+    fn <a href='#tymethod.ClearTimeout' class='fnname'>ClearTimeout</a>(&amp;self, handle: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>);
+    fn <a href='#tymethod.SetInterval' class='fnname'>SetInterval</a>(&amp;self, cx: *mut JSContext, handler: JSVal, timeout: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>;
+    fn <a href='#tymethod.ClearInterval' class='fnname'>ClearInterval</a>(&amp;self, handle: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>);
+}</pre>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.Window' class='method'><code>fn <a href='#tymethod.Window' class='fnname'>Window</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;</code></h3><h3 id='tymethod.Self' class='method'><code>fn <a href='#tymethod.Self' class='fnname'>Self</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;</code></h3><h3 id='tymethod.Document' class='method'><code>fn <a href='#tymethod.Document' class='fnname'>Document</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/document/struct.Document.html' title='script::dom::document::Document'>Document</a>&gt;</code></h3><h3 id='tymethod.Location' class='method'><code>fn <a href='#tymethod.Location' class='fnname'>Location</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/location/struct.Location.html' title='script::dom::location::Location'>Location</a>&gt;</code></h3><h3 id='tymethod.Close' class='method'><code>fn <a href='#tymethod.Close' class='fnname'>Close</a>(&amp;self)</code></h3><h3 id='tymethod.Parent' class='method'><code>fn <a href='#tymethod.Parent' class='fnname'>Parent</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;</code></h3><h3 id='tymethod.Navigator' class='method'><code>fn <a href='#tymethod.Navigator' class='fnname'>Navigator</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/navigator/struct.Navigator.html' title='script::dom::navigator::Navigator'>Navigator</a>&gt;</code></h3><h3 id='tymethod.Alert' class='method'><code>fn <a href='#tymethod.Alert' class='fnname'>Alert</a>(&amp;self, message: <a class='type' href='../../../../../../util/str/type.DOMString.html' title='util::str::DOMString'>DOMString</a>)</code></h3><h3 id='tymethod.Performance' class='method'><code>fn <a href='#tymethod.Performance' class='fnname'>Performance</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/performance/struct.Performance.html' title='script::dom::performance::Performance'>Performance</a>&gt;</code></h3><h3 id='tymethod.Screen' class='method'><code>fn <a href='#tymethod.Screen' class='fnname'>Screen</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/screen/struct.Screen.html' title='script::dom::screen::Screen'>Screen</a>&gt;</code></h3><h3 id='tymethod.Console' class='method'><code>fn <a href='#tymethod.Console' class='fnname'>Console</a>(&amp;self) -&gt; <a class='struct' href='../../../../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../../../../script/dom/console/struct.Console.html' title='script::dom::console::Console'>Console</a>&gt;</code></h3><h3 id='tymethod.Debug' class='method'><code>fn <a href='#tymethod.Debug' class='fnname'>Debug</a>(&amp;self, arg: <a class='type' href='../../../../../../util/str/type.DOMString.html' title='util::str::DOMString'>DOMString</a>)</code></h3><h3 id='tymethod.Gc' class='method'><code>fn <a href='#tymethod.Gc' class='fnname'>Gc</a>(&amp;self)</code></h3><h3 id='tymethod.GetOnclick' class='method'><code>fn <a href='#tymethod.GetOnclick' class='fnname'>GetOnclick</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;</code></h3><h3 id='tymethod.SetOnclick' class='method'><code>fn <a href='#tymethod.SetOnclick' class='fnname'>SetOnclick</a>(&amp;self, value: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;)</code></h3><h3 id='tymethod.GetOnload' class='method'><code>fn <a href='#tymethod.GetOnload' class='fnname'>GetOnload</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;</code></h3><h3 id='tymethod.SetOnload' class='method'><code>fn <a href='#tymethod.SetOnload' class='fnname'>SetOnload</a>(&amp;self, value: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;)</code></h3><h3 id='tymethod.GetOnerror' class='method'><code>fn <a href='#tymethod.GetOnerror' class='fnname'>GetOnerror</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.OnErrorEventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::OnErrorEventHandlerNonNull'>OnErrorEventHandlerNonNull</a>&gt;</code></h3><h3 id='tymethod.SetOnerror' class='method'><code>fn <a href='#tymethod.SetOnerror' class='fnname'>SetOnerror</a>(&amp;self, value: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.OnErrorEventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::OnErrorEventHandlerNonNull'>OnErrorEventHandlerNonNull</a>&gt;)</code></h3><h3 id='tymethod.GetOnunload' class='method'><code>fn <a href='#tymethod.GetOnunload' class='fnname'>GetOnunload</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;</code></h3><h3 id='tymethod.SetOnunload' class='method'><code>fn <a href='#tymethod.SetOnunload' class='fnname'>SetOnunload</a>(&amp;self, value: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a>&gt;)</code></h3><h3 id='tymethod.SetTimeout' class='method'><code>fn <a href='#tymethod.SetTimeout' class='fnname'>SetTimeout</a>(&amp;self, cx: *mut JSContext, handler: JSVal, timeout: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a></code></h3><h3 id='tymethod.ClearTimeout' class='method'><code>fn <a href='#tymethod.ClearTimeout' class='fnname'>ClearTimeout</a>(&amp;self, handle: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>)</code></h3><h3 id='tymethod.SetInterval' class='method'><code>fn <a href='#tymethod.SetInterval' class='fnname'>SetInterval</a>(&amp;self, cx: *mut JSContext, handler: JSVal, timeout: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a></code></h3><h3 id='tymethod.ClearInterval' class='method'><code>fn <a href='#tymethod.ClearInterval' class='fnname'>ClearInterval</a>(&amp;self, handle: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>)</code></h3></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl&lt;'a&gt; <a class='trait' href='../../../../../../script/dom/bindings/codegen/Bindings/WindowBinding/trait.WindowMethods.html' title='script::dom::bindings::codegen::Bindings::WindowBinding::WindowMethods'>WindowMethods</a> for <a class='struct' href='../../../../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'a, <a class='struct' href='../../../../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;</code></li>
+</ul><script type="text/javascript" async
+                              src="../../../../../../implementors/script/dom/bindings/codegen/Bindings/WindowBinding/trait.WindowMethods.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../../../jquery.js"></script>
+    <script src="../../../../../../main.js"></script>
+    
+    <script async src="../../../../../../search-index.js"></script>
+</body>
+</html>

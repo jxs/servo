@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'></p>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'>Crate <a class='mod' href=''>script</a><a class='source' id='src-0' href='../src/script/home/travis/build/servo/servo/src/components/script/script.rs.html#5-207'>[src]</a></h1>
+<div class='docblock'><p>The script crate contains all matters DOM.</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                    <tr>
+                        <td><a class='mod' href='cors/index.html'
+                               title='script::cors'>cors</a></td>
+                        <td class='docblock short'><p>A partial implementation of CORS
+For now this library is XHR-specific.
+For stuff involving <code>&lt;img&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;form&gt;</code>, etc please check what
+the request mode should be and compare with the fetch spec
+This library will eventually become the core of the Fetch crate
+with CORSRequest being expanded into FetchRequest (etc)</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='dom/index.html'
+                               title='script::dom'>dom</a></td>
+                        <td class='docblock short'><p>The implementation of the DOM.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='html/index.html'
+                               title='script::html'>html</a></td>
+                        <td class='docblock short'><p>Parsers for HTML and CSS.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='layout_interface/index.html'
+                               title='script::layout_interface'>layout_interface</a></td>
+                        <td class='docblock short'><p>The high-level interface from script to layout. Using this abstract interface helps reduce</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='page/index.html'
+                               title='script::page'>page</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='script_task/index.html'
+                               title='script::script_task'>script_task</a></td>
+                        <td class='docblock short'><p>The script task is the task that owns the DOM in memory, runs JavaScript, and spawns parsing
+and layout tasks.</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

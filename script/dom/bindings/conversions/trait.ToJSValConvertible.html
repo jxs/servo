@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::bindings::conversions::ToJSValConvertible - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>script</a>&#8203;::<a href='../../index.html'>dom</a>&#8203;::<a href='../index.html'>bindings</a>&#8203;::<a href='index.html'>conversions</a></p><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.FromJSValConvertible.html'>FromJSValConvertible</a><a class='trait ' href='trait.IDLInterface.html'>IDLInterface</a><a class='trait current' href='trait.ToJSValConvertible.html'>ToJSValConvertible</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'>Trait <a href='../../../index.html'>script</a>::<a href='../../index.html'>dom</a>::<a href='../index.html'>bindings</a>::<a href='index.html'>conversions</a>::<a class='trait' href=''>ToJSValConvertible</a><a class='source' id='src-11147' href='../../../../src/script/home/travis/build/servo/servo/src/components/script/dom/bindings/conversions.rs.html#39-42'>[src]</a></h1>
+<pre class='rust trait'>pub trait ToJSValConvertible {
+    fn <a href='#tymethod.to_jsval' class='fnname'>to_jsval</a>(&amp;self, cx: *mut JSContext) -&gt; JSVal;
+}</pre><div class='docblock'><p>A trait to convert Rust types to <code>JSVal</code>s.</p>
+</div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.to_jsval' class='method'><code>fn <a href='#tymethod.to_jsval' class='fnname'>to_jsval</a>(&amp;self, cx: *mut JSContext) -&gt; JSVal</code></h3><div class='docblock'><p>Convert <code>self</code> to a <code>JSVal</code>. JSAPI failure causes a task failure.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for ()</code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for JSVal</code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.i8.html'>i8</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.u8.html'>u8</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.i16.html'>i16</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.u16.html'>u16</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.i64.html'>i64</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.u64.html'>u64</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a href='http://doc.rust-lang.org/std/primitive.f64.html'>f64</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../util/str/type.DOMString.html' title='util::str::DOMString'>DOMString</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='struct' href='../../../../script/dom/bindings/str/struct.ByteString.html' title='script::dom::bindings::str::ByteString'>ByteString</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='struct' href='../../../../script/dom/bindings/utils/struct.Reflector.html' title='script::dom::bindings::utils::Reflector'>Reflector</a></code></li>
+<li><code>impl&lt;'a, 'b, T: <a class='trait' href='../../../../script/dom/bindings/utils/trait.Reflectable.html' title='script::dom::bindings::utils::Reflectable'>Reflectable</a>&gt; <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='struct' href='../../../../script/dom/bindings/js/struct.Root.html' title='script::dom::bindings::js::Root'>Root</a>&lt;'a, 'b, T&gt;</code></li>
+<li><code>impl&lt;'a, T: <a class='trait' href='../../../../script/dom/bindings/utils/trait.Reflectable.html' title='script::dom::bindings::utils::Reflectable'>Reflectable</a>&gt; <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='struct' href='../../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'a, T&gt;</code></li>
+<li><code>impl&lt;'a, T: <a class='trait' href='../../../../script/dom/bindings/utils/trait.Reflectable.html' title='script::dom::bindings::utils::Reflectable'>Reflectable</a>&gt; <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='struct' href='../../../../script/dom/bindings/js/struct.JS.html' title='script::dom::bindings::js::JS'>JS</a>&lt;T&gt;</code></li>
+<li><code>impl&lt;T: <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a>&gt; <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;T&gt;</code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for *mut JSObject</code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../script/dom/bindings/codegen/Bindings/DOMParserBinding/SupportedTypeValues/type.valuelist.html' title='script::dom::bindings::codegen::Bindings::DOMParserBinding::SupportedTypeValues::valuelist'>valuelist</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='struct' href='../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.EventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::EventHandlerNonNull'>EventHandlerNonNull</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='struct' href='../../../../script/dom/bindings/codegen/Bindings/EventHandlerBinding/struct.OnErrorEventHandlerNonNull.html' title='script::dom::bindings::codegen::Bindings::EventHandlerBinding::OnErrorEventHandlerNonNull'>OnErrorEventHandlerNonNull</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='struct' href='../../../../script/dom/bindings/codegen/Bindings/EventListenerBinding/struct.EventListener.html' title='script::dom::bindings::codegen::Bindings::EventListenerBinding::EventListener'>EventListener</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../script/dom/bindings/codegen/Bindings/TestBindingBinding/TestEnumValues/type.valuelist.html' title='script::dom::bindings::codegen::Bindings::TestBindingBinding::TestEnumValues::valuelist'>valuelist</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../script/dom/bindings/codegen/Bindings/XMLHttpRequestBinding/XMLHttpRequestResponseTypeValues/type.valuelist.html' title='script::dom::bindings::codegen::Bindings::XMLHttpRequestBinding::XMLHttpRequestResponseTypeValues::valuelist'>valuelist</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../script/dom/bindings/codegen/UnionTypes/BlobOrString/type.BlobOrString.html' title='script::dom::bindings::codegen::UnionTypes::BlobOrString::BlobOrString'>BlobOrString</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../script/dom/bindings/codegen/UnionTypes/EventOrString/type.EventOrString.html' title='script::dom::bindings::codegen::UnionTypes::EventOrString::EventOrString'>EventOrString</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../script/dom/bindings/codegen/UnionTypes/FileOrString/type.FileOrString.html' title='script::dom::bindings::codegen::UnionTypes::FileOrString::FileOrString'>FileOrString</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../script/dom/bindings/codegen/UnionTypes/HTMLElementOrLong/type.HTMLElementOrLong.html' title='script::dom::bindings::codegen::UnionTypes::HTMLElementOrLong::HTMLElementOrLong'>HTMLElementOrLong</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../script/dom/bindings/codegen/UnionTypes/HTMLOptionElementOrHTMLOptGroupElement/type.HTMLOptionElementOrHTMLOptGroupElement.html' title='script::dom::bindings::codegen::UnionTypes::HTMLOptionElementOrHTMLOptGroupElement::HTMLOptionElementOrHTMLOptGroupElement'>HTMLOptionElementOrHTMLOptGroupElement</a></code></li>
+<li><code>impl <a class='trait' href='../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../script/dom/bindings/codegen/UnionTypes/StringOrURLSearchParams/type.StringOrURLSearchParams.html' title='script::dom::bindings::codegen::UnionTypes::StringOrURLSearchParams::StringOrURLSearchParams'>StringOrURLSearchParams</a></code></li>
+</ul><script type="text/javascript" async
+                              src="../../../../implementors/script/dom/bindings/conversions/trait.ToJSValConvertible.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    
+    <script async src="../../../../search-index.js"></script>
+</body>
+</html>

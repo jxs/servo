@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The gfx library documentation.">
+
+    <title>gfx::font::Font - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>gfx</a>&#8203;::<a href='index.html'>font</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.Font.html'>Font</a><a class='struct ' href='struct.FontGroup.html'>FontGroup</a><a class='struct ' href='struct.FontMetrics.html'>FontMetrics</a><a class='struct ' href='struct.FontStyle.html'>FontStyle</a><a class='struct ' href='struct.RunMetrics.html'>RunMetrics</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.FontHandleMethods.html'>FontHandleMethods</a><a class='trait ' href='trait.FontTableMethods.html'>FontTableMethods</a><a class='trait ' href='trait.FontTableTagConversions.html'>FontTableTagConversions</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'>Struct <a href='../index.html'>gfx</a>::<a href='index.html'>font</a>::<a class='struct' href=''>Font</a><a class='source' id='src-8478' href='../../src/gfx/home/travis/build/servo/servo/src/components/gfx/font.rs.html#101-109'>[src]</a></h1>
+<pre class='rust struct'>pub struct Font {
+    pub handle: <a class='struct' href='../../gfx/platform/linux/font/struct.FontHandle.html' title='gfx::platform::linux::font::FontHandle'>FontHandle</a>,
+    pub metrics: <a class='struct' href='../../gfx/font/struct.FontMetrics.html' title='gfx::font::FontMetrics'>FontMetrics</a>,
+    pub descriptor: <a class='struct' href='../../gfx/font_template/struct.FontTemplateDescriptor.html' title='gfx::font_template::FontTemplateDescriptor'>FontTemplateDescriptor</a>,
+    pub pt_size: <a href='http://doc.rust-lang.org/std/primitive.f64.html'>f64</a>,
+    pub shaper: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../gfx/text/shaping/harfbuzz/struct.Shaper.html' title='gfx::text::shaping::harfbuzz::Shaper'>Shaper</a>&gt;,
+    pub shape_cache: <a class='struct' href='../../util/cache/struct.HashCache.html' title='util::cache::HashCache'>HashCache</a>&lt;<a class='struct' href='http://doc.rust-lang.org/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='http://doc.rust-lang.org/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../gfx/text/glyph/struct.GlyphStore.html' title='gfx::text::glyph::GlyphStore'>GlyphStore</a>&gt;&gt;,
+    pub glyph_advance_cache: <a class='struct' href='../../util/cache/struct.HashCache.html' title='util::cache::HashCache'>HashCache</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a>, <a class='type' href='../../gfx/font/type.FractionalPixel.html' title='gfx::font::FractionalPixel'>FractionalPixel</a>&gt;,
+}</pre><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.handle'><code>handle</code></td><td></td></tr><tr><td id='structfield.metrics'><code>metrics</code></td><td></td></tr><tr><td id='structfield.descriptor'><code>descriptor</code></td><td></td></tr><tr><td id='structfield.pt_size'><code>pt_size</code></td><td></td></tr><tr><td id='structfield.shaper'><code>shaper</code></td><td></td></tr><tr><td id='structfield.shape_cache'><code>shape_cache</code></td><td></td></tr><tr><td id='structfield.glyph_advance_cache'><code>glyph_advance_cache</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../gfx/font/struct.Font.html' title='gfx::font::Font'>Font</a></code></h3><div class='methods'><h4 id='method.shape_text' class='method'><code>fn <a href='#method.shape_text' class='fnname'>shape_text</a>(&amp;mut self, text: <a class='struct' href='http://doc.rust-lang.org/collections/string/struct.String.html' title='collections::string::String'>String</a>, is_whitespace: <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a>) -&gt; <a class='struct' href='http://doc.rust-lang.org/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../gfx/text/glyph/struct.GlyphStore.html' title='gfx::text::glyph::GlyphStore'>GlyphStore</a>&gt;</code></h4>
+<h4 id='method.get_table_for_tag' class='method'><code>fn <a href='#method.get_table_for_tag' class='fnname'>get_table_for_tag</a>(&amp;self, tag: <a class='type' href='../../gfx/font/type.FontTableTag.html' title='gfx::font::FontTableTag'>FontTableTag</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../gfx/platform/linux/font/struct.FontTable.html' title='gfx::platform::linux::font::FontTable'>FontTable</a>&gt;</code></h4>
+<h4 id='method.glyph_index' class='method'><code>fn <a href='#method.glyph_index' class='fnname'>glyph_index</a>(&amp;self, codepoint: <a href='http://doc.rust-lang.org/std/primitive.char.html'>char</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../gfx/text/glyph/type.GlyphId.html' title='gfx::text::glyph::GlyphId'>GlyphId</a>&gt;</code></h4>
+<h4 id='method.glyph_h_kerning' class='method'><code>fn <a href='#method.glyph_h_kerning' class='fnname'>glyph_h_kerning</a>(&amp;mut self, first_glyph: <a class='type' href='../../gfx/text/glyph/type.GlyphId.html' title='gfx::text::glyph::GlyphId'>GlyphId</a>, second_glyph: <a class='type' href='../../gfx/text/glyph/type.GlyphId.html' title='gfx::text::glyph::GlyphId'>GlyphId</a>) -&gt; <a class='type' href='../../gfx/font/type.FractionalPixel.html' title='gfx::font::FractionalPixel'>FractionalPixel</a></code></h4>
+<h4 id='method.glyph_h_advance' class='method'><code>fn <a href='#method.glyph_h_advance' class='fnname'>glyph_h_advance</a>(&amp;mut self, glyph: <a class='type' href='../../gfx/text/glyph/type.GlyphId.html' title='gfx::text::glyph::GlyphId'>GlyphId</a>) -&gt; <a class='type' href='../../gfx/font/type.FractionalPixel.html' title='gfx::font::FractionalPixel'>FractionalPixel</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "gfx";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

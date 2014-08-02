@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>script</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../cors/index.html'>cors</a><a class='mod current' href='../dom/index.html'>dom</a><a class='mod ' href='../html/index.html'>html</a><a class='mod ' href='../layout_interface/index.html'>layout_interface</a><a class='mod ' href='../page/index.html'>page</a><a class='mod ' href='../script_task/index.html'>script_task</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'>Module <a href='../index.html'>script</a>::<a class='mod' href=''>dom</a><a class='source' id='src-1970' href='../../src/script/home/travis/build/servo/servo/src/components/script/script.rs.html#51-197'>[src]</a></h1>
+<div class='docblock'><p>The implementation of the DOM.</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                    <tr>
+                        <td><a class='mod' href='attr/index.html'
+                               title='script::dom::attr'>attr</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='attrlist/index.html'
+                               title='script::dom::attrlist'>attrlist</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='bindings/index.html'
+                               title='script::dom::bindings'>bindings</a></td>
+                        <td class='docblock short'><p>The code to expose the DOM to JavaScript through IDL bindings.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='blob/index.html'
+                               title='script::dom::blob'>blob</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='browsercontext/index.html'
+                               title='script::dom::browsercontext'>browsercontext</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='canvasrenderingcontext2d/index.html'
+                               title='script::dom::canvasrenderingcontext2d'>canvasrenderingcontext2d</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='characterdata/index.html'
+                               title='script::dom::characterdata'>characterdata</a></td>
+                        <td class='docblock short'><p>DOM bindings for <code>CharacterData</code>.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='clientrect/index.html'
+                               title='script::dom::clientrect'>clientrect</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='clientrectlist/index.html'
+                               title='script::dom::clientrectlist'>clientrectlist</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='comment/index.html'
+                               title='script::dom::comment'>comment</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='console/index.html'
+                               title='script::dom::console'>console</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='customevent/index.html'
+                               title='script::dom::customevent'>customevent</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='dedicatedworkerglobalscope/index.html'
+                               title='script::dom::dedicatedworkerglobalscope'>dedicatedworkerglobalscope</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='document/index.html'
+                               title='script::dom::document'>document</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='documentfragment/index.html'
+                               title='script::dom::documentfragment'>documentfragment</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='documenttype/index.html'
+                               title='script::dom::documenttype'>documenttype</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='domexception/index.html'
+                               title='script::dom::domexception'>domexception</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='domimplementation/index.html'
+                               title='script::dom::domimplementation'>domimplementation</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='domparser/index.html'
+                               title='script::dom::domparser'>domparser</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='domtokenlist/index.html'
+                               title='script::dom::domtokenlist'>domtokenlist</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='element/index.html'
+                               title='script::dom::element'>element</a></td>
+                        <td class='docblock short'><p>Element nodes.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='event/index.html'
+                               title='script::dom::event'>event</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='eventdispatcher/index.html'
+                               title='script::dom::eventdispatcher'>eventdispatcher</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='eventtarget/index.html'
+                               title='script::dom::eventtarget'>eventtarget</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='file/index.html'
+                               title='script::dom::file'>file</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='formdata/index.html'
+                               title='script::dom::formdata'>formdata</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlanchorelement/index.html'
+                               title='script::dom::htmlanchorelement'>htmlanchorelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlappletelement/index.html'
+                               title='script::dom::htmlappletelement'>htmlappletelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlareaelement/index.html'
+                               title='script::dom::htmlareaelement'>htmlareaelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlaudioelement/index.html'
+                               title='script::dom::htmlaudioelement'>htmlaudioelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlbaseelement/index.html'
+                               title='script::dom::htmlbaseelement'>htmlbaseelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlbodyelement/index.html'
+                               title='script::dom::htmlbodyelement'>htmlbodyelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlbrelement/index.html'
+                               title='script::dom::htmlbrelement'>htmlbrelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlbuttonelement/index.html'
+                               title='script::dom::htmlbuttonelement'>htmlbuttonelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlcanvaselement/index.html'
+                               title='script::dom::htmlcanvaselement'>htmlcanvaselement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlcollection/index.html'
+                               title='script::dom::htmlcollection'>htmlcollection</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmldataelement/index.html'
+                               title='script::dom::htmldataelement'>htmldataelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmldatalistelement/index.html'
+                               title='script::dom::htmldatalistelement'>htmldatalistelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmldirectoryelement/index.html'
+                               title='script::dom::htmldirectoryelement'>htmldirectoryelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmldivelement/index.html'
+                               title='script::dom::htmldivelement'>htmldivelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmldlistelement/index.html'
+                               title='script::dom::htmldlistelement'>htmldlistelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlelement/index.html'
+                               title='script::dom::htmlelement'>htmlelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlembedelement/index.html'
+                               title='script::dom::htmlembedelement'>htmlembedelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlfieldsetelement/index.html'
+                               title='script::dom::htmlfieldsetelement'>htmlfieldsetelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlfontelement/index.html'
+                               title='script::dom::htmlfontelement'>htmlfontelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlformelement/index.html'
+                               title='script::dom::htmlformelement'>htmlformelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlframeelement/index.html'
+                               title='script::dom::htmlframeelement'>htmlframeelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlframesetelement/index.html'
+                               title='script::dom::htmlframesetelement'>htmlframesetelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlheadelement/index.html'
+                               title='script::dom::htmlheadelement'>htmlheadelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlheadingelement/index.html'
+                               title='script::dom::htmlheadingelement'>htmlheadingelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlhrelement/index.html'
+                               title='script::dom::htmlhrelement'>htmlhrelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlhtmlelement/index.html'
+                               title='script::dom::htmlhtmlelement'>htmlhtmlelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmliframeelement/index.html'
+                               title='script::dom::htmliframeelement'>htmliframeelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlimageelement/index.html'
+                               title='script::dom::htmlimageelement'>htmlimageelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlinputelement/index.html'
+                               title='script::dom::htmlinputelement'>htmlinputelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmllabelelement/index.html'
+                               title='script::dom::htmllabelelement'>htmllabelelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmllegendelement/index.html'
+                               title='script::dom::htmllegendelement'>htmllegendelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmllielement/index.html'
+                               title='script::dom::htmllielement'>htmllielement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmllinkelement/index.html'
+                               title='script::dom::htmllinkelement'>htmllinkelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlmapelement/index.html'
+                               title='script::dom::htmlmapelement'>htmlmapelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlmediaelement/index.html'
+                               title='script::dom::htmlmediaelement'>htmlmediaelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlmetaelement/index.html'
+                               title='script::dom::htmlmetaelement'>htmlmetaelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlmeterelement/index.html'
+                               title='script::dom::htmlmeterelement'>htmlmeterelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlmodelement/index.html'
+                               title='script::dom::htmlmodelement'>htmlmodelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlobjectelement/index.html'
+                               title='script::dom::htmlobjectelement'>htmlobjectelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlolistelement/index.html'
+                               title='script::dom::htmlolistelement'>htmlolistelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmloptgroupelement/index.html'
+                               title='script::dom::htmloptgroupelement'>htmloptgroupelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmloptionelement/index.html'
+                               title='script::dom::htmloptionelement'>htmloptionelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmloutputelement/index.html'
+                               title='script::dom::htmloutputelement'>htmloutputelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlparagraphelement/index.html'
+                               title='script::dom::htmlparagraphelement'>htmlparagraphelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlparamelement/index.html'
+                               title='script::dom::htmlparamelement'>htmlparamelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlpreelement/index.html'
+                               title='script::dom::htmlpreelement'>htmlpreelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlprogresselement/index.html'
+                               title='script::dom::htmlprogresselement'>htmlprogresselement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlquoteelement/index.html'
+                               title='script::dom::htmlquoteelement'>htmlquoteelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlscriptelement/index.html'
+                               title='script::dom::htmlscriptelement'>htmlscriptelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlselectelement/index.html'
+                               title='script::dom::htmlselectelement'>htmlselectelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlserializer/index.html'
+                               title='script::dom::htmlserializer'>htmlserializer</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlsourceelement/index.html'
+                               title='script::dom::htmlsourceelement'>htmlsourceelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlspanelement/index.html'
+                               title='script::dom::htmlspanelement'>htmlspanelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlstyleelement/index.html'
+                               title='script::dom::htmlstyleelement'>htmlstyleelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltablecaptionelement/index.html'
+                               title='script::dom::htmltablecaptionelement'>htmltablecaptionelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltablecellelement/index.html'
+                               title='script::dom::htmltablecellelement'>htmltablecellelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltablecolelement/index.html'
+                               title='script::dom::htmltablecolelement'>htmltablecolelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltabledatacellelement/index.html'
+                               title='script::dom::htmltabledatacellelement'>htmltabledatacellelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltableelement/index.html'
+                               title='script::dom::htmltableelement'>htmltableelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltableheadercellelement/index.html'
+                               title='script::dom::htmltableheadercellelement'>htmltableheadercellelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltablerowelement/index.html'
+                               title='script::dom::htmltablerowelement'>htmltablerowelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltablesectionelement/index.html'
+                               title='script::dom::htmltablesectionelement'>htmltablesectionelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltemplateelement/index.html'
+                               title='script::dom::htmltemplateelement'>htmltemplateelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltextareaelement/index.html'
+                               title='script::dom::htmltextareaelement'>htmltextareaelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltimeelement/index.html'
+                               title='script::dom::htmltimeelement'>htmltimeelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltitleelement/index.html'
+                               title='script::dom::htmltitleelement'>htmltitleelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmltrackelement/index.html'
+                               title='script::dom::htmltrackelement'>htmltrackelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlulistelement/index.html'
+                               title='script::dom::htmlulistelement'>htmlulistelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlunknownelement/index.html'
+                               title='script::dom::htmlunknownelement'>htmlunknownelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='htmlvideoelement/index.html'
+                               title='script::dom::htmlvideoelement'>htmlvideoelement</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='location/index.html'
+                               title='script::dom::location'>location</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='messageevent/index.html'
+                               title='script::dom::messageevent'>messageevent</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='mouseevent/index.html'
+                               title='script::dom::mouseevent'>mouseevent</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='navigator/index.html'
+                               title='script::dom::navigator'>navigator</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='node/index.html'
+                               title='script::dom::node'>node</a></td>
+                        <td class='docblock short'><p>The core DOM types. Defines the basic DOM hierarchy as well as all the HTML elements.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='nodelist/index.html'
+                               title='script::dom::nodelist'>nodelist</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='performance/index.html'
+                               title='script::dom::performance'>performance</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='performancetiming/index.html'
+                               title='script::dom::performancetiming'>performancetiming</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='processinginstruction/index.html'
+                               title='script::dom::processinginstruction'>processinginstruction</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='progressevent/index.html'
+                               title='script::dom::progressevent'>progressevent</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='screen/index.html'
+                               title='script::dom::screen'>screen</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='testbinding/index.html'
+                               title='script::dom::testbinding'>testbinding</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='text/index.html'
+                               title='script::dom::text'>text</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='types/index.html'
+                               title='script::dom::types'>types</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='uievent/index.html'
+                               title='script::dom::uievent'>uievent</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='urlsearchparams/index.html'
+                               title='script::dom::urlsearchparams'>urlsearchparams</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='validitystate/index.html'
+                               title='script::dom::validitystate'>validitystate</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='virtualmethods/index.html'
+                               title='script::dom::virtualmethods'>virtualmethods</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='window/index.html'
+                               title='script::dom::window'>window</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='worker/index.html'
+                               title='script::dom::worker'>worker</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='workerglobalscope/index.html'
+                               title='script::dom::workerglobalscope'>workerglobalscope</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='xmlhttprequest/index.html'
+                               title='script::dom::xmlhttprequest'>xmlhttprequest</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='xmlhttprequesteventtarget/index.html'
+                               title='script::dom::xmlhttprequesteventtarget'>xmlhttprequesteventtarget</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='mod' href='xmlhttprequestupload/index.html'
+                               title='script::dom::xmlhttprequestupload'>xmlhttprequestupload</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

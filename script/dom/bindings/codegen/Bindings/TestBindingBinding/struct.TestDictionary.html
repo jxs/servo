@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::bindings::codegen::Bindings::TestBindingBinding::TestDictionary - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../../../../index.html'>script</a>&#8203;::<a href='../../../../index.html'>dom</a>&#8203;::<a href='../../../index.html'>bindings</a>&#8203;::<a href='../../index.html'>codegen</a>&#8203;::<a href='../index.html'>Bindings</a>&#8203;::<a href='index.html'>TestBindingBinding</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='TestEnumValues/index.html'>TestEnumValues</a></div><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.TestDictionary.html'>TestDictionary</a><a class='struct ' href='struct.TestDictionaryDefaults.html'>TestDictionaryDefaults</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.TestBindingMethods.html'>TestBindingMethods</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.DefineDOMInterface.html'>DefineDOMInterface</a><a class='fn ' href='fn.GetProtoObject.html'>GetProtoObject</a><a class='fn ' href='fn.Wrap.html'>Wrap</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'>Struct <a href='../../../../../index.html'>script</a>::<a href='../../../../index.html'>dom</a>::<a href='../../../index.html'>bindings</a>::<a href='../../index.html'>codegen</a>::<a href='../index.html'>Bindings</a>::<a href='index.html'>TestBindingBinding</a>::<a class='struct' href=''>TestDictionary</a><a class='source' id='src-278892' href='../../../../../../src/script/home/travis/build/servo/servo/src/components/script/dom/bindings/codegen/Bindings/TestBindingBinding.rs.html#417-433'>[src]</a></h1>
+<pre class='rust struct'>pub struct TestDictionary&lt;'a, 'b&gt; {
+    pub anyValue: JSVal,
+    pub booleanValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a>&gt;,
+    pub byteValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.i8.html'>i8</a>&gt;,
+    pub doubleValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.f64.html'>f64</a>&gt;,
+    pub enumValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../../../../../script/dom/bindings/codegen/Bindings/TestBindingBinding/type.TestEnum.html' title='script::dom::bindings::codegen::Bindings::TestBindingBinding::TestEnum'>TestEnum</a>&gt;,
+    pub floatValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>&gt;,
+    pub interfaceValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/js/struct.Root.html' title='script::dom::bindings::js::Root'>Root</a>&lt;'a, 'b, <a class='struct' href='../../../../../../script/dom/blob/struct.Blob.html' title='script::dom::blob::Blob'>Blob</a>&gt;&gt;,
+    pub longLongValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.i64.html'>i64</a>&gt;,
+    pub longValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>&gt;,
+    pub octetValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u8.html'>u8</a>&gt;,
+    pub shortValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.i16.html'>i16</a>&gt;,
+    pub stringValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../../../../../util/str/type.DOMString.html' title='util::str::DOMString'>DOMString</a>&gt;,
+    pub unsignedLongLongValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u64.html'>u64</a>&gt;,
+    pub unsignedLongValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a>&gt;,
+    pub unsignedShortValue: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u16.html'>u16</a>&gt;,
+}</pre><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.anyValue'><code>anyValue</code></td><td></td></tr><tr><td id='structfield.booleanValue'><code>booleanValue</code></td><td></td></tr><tr><td id='structfield.byteValue'><code>byteValue</code></td><td></td></tr><tr><td id='structfield.doubleValue'><code>doubleValue</code></td><td></td></tr><tr><td id='structfield.enumValue'><code>enumValue</code></td><td></td></tr><tr><td id='structfield.floatValue'><code>floatValue</code></td><td></td></tr><tr><td id='structfield.interfaceValue'><code>interfaceValue</code></td><td></td></tr><tr><td id='structfield.longLongValue'><code>longLongValue</code></td><td></td></tr><tr><td id='structfield.longValue'><code>longValue</code></td><td></td></tr><tr><td id='structfield.octetValue'><code>octetValue</code></td><td></td></tr><tr><td id='structfield.shortValue'><code>shortValue</code></td><td></td></tr><tr><td id='structfield.stringValue'><code>stringValue</code></td><td></td></tr><tr><td id='structfield.unsignedLongLongValue'><code>unsignedLongLongValue</code></td><td></td></tr><tr><td id='structfield.unsignedLongValue'><code>unsignedLongValue</code></td><td></td></tr><tr><td id='structfield.unsignedShortValue'><code>unsignedShortValue</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a, 'b&gt; <a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/TestBindingBinding/struct.TestDictionary.html' title='script::dom::bindings::codegen::Bindings::TestBindingBinding::TestDictionary'>TestDictionary</a>&lt;'a, 'b&gt;</code></h3><div class='methods'><h4 id='method.empty' class='method'><code>fn <a href='#method.empty' class='fnname'>empty</a>() -&gt; <a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/TestBindingBinding/struct.TestDictionary.html' title='script::dom::bindings::codegen::Bindings::TestBindingBinding::TestDictionary'>TestDictionary</a></code></h4>
+<h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(cx: *mut JSContext, val: JSVal) -&gt; <a class='type' href='http://doc.rust-lang.org/core/result/type.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../../../../../script/dom/bindings/codegen/Bindings/TestBindingBinding/struct.TestDictionary.html' title='script::dom::bindings::codegen::Bindings::TestBindingBinding::TestDictionary'>TestDictionary</a>, ()&gt;</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../../../jquery.js"></script>
+    <script src="../../../../../../main.js"></script>
+    
+    <script async src="../../../../../../search-index.js"></script>
+</body>
+</html>

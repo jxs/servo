@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::script_task::ScriptMsg - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>script</a>&#8203;::<a href='index.html'>script_task</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.NewLayoutInfo.html'>NewLayoutInfo</a><a class='struct ' href='struct.ScriptChan.html'>ScriptChan</a><a class='struct ' href='struct.ScriptTask.html'>ScriptTask</a><a class='struct ' href='struct.StackRootTLS.html'>StackRootTLS</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content type">
+<h1 class='fqn'>Enum <a href='../index.html'>script</a>::<a href='index.html'>script_task</a>::<a class='type' href=''>ScriptMsg</a><a class='source' id='src-487290' href='../../src/script/home/travis/build/servo/servo/src/components/script/script_task.rs.html#61-88'>[src]</a></h1>
+<pre class='rust enum'>pub enum ScriptMsg {
+    LoadMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, Url),
+    TriggerFragmentMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, Url),
+    TriggerLoadMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, Url),
+    AttachLayoutMsg(<a class='struct' href='../../script/script_task/struct.NewLayoutInfo.html' title='script::script_task::NewLayoutInfo'>NewLayoutInfo</a>),
+    NavigateMsg(<a class='type' href='../../msg/constellation_msg/type.NavigationDirection.html' title='msg::constellation_msg::NavigationDirection'>NavigationDirection</a>),
+    SendEventMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, <a class='type' href='../../script/dom/event/type.Event_.html' title='script::dom::event::Event_'>Event_</a>),
+    ResizeMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, <a class='struct' href='../../msg/constellation_msg/struct.WindowSizeData.html' title='msg::constellation_msg::WindowSizeData'>WindowSizeData</a>),
+    FireTimerMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, <a class='struct' href='../../script/dom/window/struct.TimerId.html' title='script::dom::window::TimerId'>TimerId</a>),
+    ReflowCompleteMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, <a href='http://doc.rust-lang.org/std/primitive.uint.html'>uint</a>),
+    ResizeInactiveMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, <a class='struct' href='../../msg/constellation_msg/struct.WindowSizeData.html' title='msg::constellation_msg::WindowSizeData'>WindowSizeData</a>),
+    ExitPipelineMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>),
+    ExitWindowMsg(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>),
+    XHRProgressMsg(<a class='struct' href='../../script/dom/xmlhttprequest/struct.TrustedXHRAddress.html' title='script::dom::xmlhttprequest::TrustedXHRAddress'>TrustedXHRAddress</a>, <a class='type' href='../../script/dom/xmlhttprequest/type.XHRProgress.html' title='script::dom::xmlhttprequest::XHRProgress'>XHRProgress</a>),
+}</pre><div class='docblock'><p>Messages used to control the script task.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.LoadMsg'><code>LoadMsg</code></td><td><div class='docblock'><p>Loads a new URL on the specified pipeline.</p>
+</div></td></tr><tr><td id='variant.TriggerFragmentMsg'><code>TriggerFragmentMsg</code></td><td><div class='docblock'><p>Acts on a fragment URL load on the specified pipeline.</p>
+</div></td></tr><tr><td id='variant.TriggerLoadMsg'><code>TriggerLoadMsg</code></td><td><div class='docblock'><p>Begins a content-initiated load on the specified pipeline.</p>
+</div></td></tr><tr><td id='variant.AttachLayoutMsg'><code>AttachLayoutMsg</code></td><td><div class='docblock'><p>Gives a channel and ID to a layout task, as well as the ID of that layout&#39;s parent</p>
+</div></td></tr><tr><td id='variant.NavigateMsg'><code>NavigateMsg</code></td><td><div class='docblock'><p>Instructs the script task to send a navigate message to the constellation.</p>
+</div></td></tr><tr><td id='variant.SendEventMsg'><code>SendEventMsg</code></td><td><div class='docblock'><p>Sends a DOM event.</p>
+</div></td></tr><tr><td id='variant.ResizeMsg'><code>ResizeMsg</code></td><td><div class='docblock'><p>Window resized.  Sends a DOM event eventually, but first we combine events.</p>
+</div></td></tr><tr><td id='variant.FireTimerMsg'><code>FireTimerMsg</code></td><td><div class='docblock'><p>Fires a JavaScript timeout.</p>
+</div></td></tr><tr><td id='variant.ReflowCompleteMsg'><code>ReflowCompleteMsg</code></td><td><div class='docblock'><p>Notifies script that reflow is finished.</p>
+</div></td></tr><tr><td id='variant.ResizeInactiveMsg'><code>ResizeInactiveMsg</code></td><td><div class='docblock'><p>Notifies script that window has been resized but to not take immediate action.</p>
+</div></td></tr><tr><td id='variant.ExitPipelineMsg'><code>ExitPipelineMsg</code></td><td><div class='docblock'><p>Notifies the script that a pipeline should be closed.</p>
+</div></td></tr><tr><td id='variant.ExitWindowMsg'><code>ExitWindowMsg</code></td><td><div class='docblock'><p>Notifies the script that a window associated with a particular pipeline should be closed.</p>
+</div></td></tr><tr><td id='variant.XHRProgressMsg'><code>XHRProgressMsg</code></td><td><div class='docblock'><p>Notifies the script of progress on a fetch</p>
+</div></td></tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

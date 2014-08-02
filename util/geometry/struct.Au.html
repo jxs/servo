@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The util library documentation.">
+
+    <title>util::geometry::Au - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>util</a>&#8203;::<a href='index.html'>geometry</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.Au.html'>Au</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.f32_rect_to_au_rect.html'>f32_rect_to_au_rect</a><a class='fn ' href='fn.from_frac_px.html'>from_frac_px</a><a class='fn ' href='fn.from_pt.html'>from_pt</a><a class='fn ' href='fn.from_px.html'>from_px</a><a class='fn ' href='fn.max.html'>max</a><a class='fn ' href='fn.min.html'>min</a><a class='fn ' href='fn.pt_to_px.html'>pt_to_px</a><a class='fn ' href='fn.px_to_pt.html'>px_to_pt</a><a class='fn ' href='fn.rect_contains_point.html'>rect_contains_point</a><a class='fn ' href='fn.to_frac_px.html'>to_frac_px</a><a class='fn ' href='fn.to_pt.html'>to_pt</a><a class='fn ' href='fn.to_px.html'>to_px</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'>Struct <a href='../index.html'>util</a>::<a href='index.html'>geometry</a>::<a class='struct' href=''>Au</a><a class='source' id='src-1728' href='../../src/util/home/travis/build/servo/servo/src/components/util/geometry.rs.html#71'>[src]</a></h1>
+<pre class='rust struct'>pub struct Au(pub <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>);</pre><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(value: <a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<div class='docblock'><p>FIXME(pcwalton): Workaround for lack of cross crate inlining of newtype structs!</p>
+</div><h4 id='method.scale_by' class='method'><code>fn <a href='#method.scale_by' class='fnname'>scale_by</a>(self, factor: <a href='http://doc.rust-lang.org/std/primitive.f64.html'>f64</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.from_px' class='method'><code>fn <a href='#method.from_px' class='fnname'>from_px</a>(px: <a href='http://doc.rust-lang.org/std/primitive.int.html'>int</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.from_page_px' class='method'><code>fn <a href='#method.from_page_px' class='fnname'>from_page_px</a>(px: Length&lt;<a class='type' href='../../util/geometry/type.PagePx.html' title='util::geometry::PagePx'>PagePx</a>, <a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>&gt;) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.to_nearest_px' class='method'><code>fn <a href='#method.to_nearest_px' class='fnname'>to_nearest_px</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.int.html'>int</a></code></h4>
+<h4 id='method.to_snapped' class='method'><code>fn <a href='#method.to_snapped' class='fnname'>to_snapped</a>(&amp;self) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.from_frac32_px' class='method'><code>fn <a href='#method.from_frac32_px' class='fnname'>from_frac32_px</a>(px: <a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.from_pt' class='method'><code>fn <a href='#method.from_pt' class='fnname'>from_pt</a>(pt: <a href='http://doc.rust-lang.org/std/primitive.f64.html'>f64</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.from_frac_px' class='method'><code>fn <a href='#method.from_frac_px' class='fnname'>from_frac_px</a>(px: <a href='http://doc.rust-lang.org/std/primitive.f64.html'>f64</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.min' class='method'><code>fn <a href='#method.min' class='fnname'>min</a>(x: <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>, y: <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.max' class='method'><code>fn <a href='#method.max' class='fnname'>max</a>(x: <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>, y: <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/fmt/trait.Show.html' title='core::fmt::Show'>Show</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.fmt' class='method'><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='http://doc.rust-lang.org/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/ops/trait.Add.html' title='core::ops::Add'>Add</a>&lt;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>, <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>&gt; for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.add' class='method'><code>fn <a href='#method.add' class='fnname'>add</a>(&amp;self, other: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/ops/trait.Sub.html' title='core::ops::Sub'>Sub</a>&lt;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>, <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>&gt; for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.sub' class='method'><code>fn <a href='#method.sub' class='fnname'>sub</a>(&amp;self, other: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>&lt;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>, <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>&gt; for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.mul' class='method'><code>fn <a href='#method.mul' class='fnname'>mul</a>(&amp;self, other: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/ops/trait.Div.html' title='core::ops::Div'>Div</a>&lt;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>, <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>&gt; for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.div' class='method'><code>fn <a href='#method.div' class='fnname'>div</a>(&amp;self, other: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/ops/trait.Rem.html' title='core::ops::Rem'>Rem</a>&lt;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>, <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>&gt; for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.rem' class='method'><code>fn <a href='#method.rem' class='fnname'>rem</a>(&amp;self, other: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/ops/trait.Neg.html' title='core::ops::Neg'>Neg</a>&lt;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>&gt; for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.neg' class='method'><code>fn <a href='#method.neg' class='fnname'>neg</a>(&amp;self) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/num/trait.One.html' title='core::num::One'>One</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.one' class='method'><code>fn <a href='#method.one' class='fnname'>one</a>() -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/num/trait.Num.html' title='core::num::Num'>Num</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'></div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/num/trait.NumCast.html' title='core::num::NumCast'>NumCast</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.from' class='method'><code>fn <a href='#method.from' class='fnname'>from</a>&lt;T: <a class='trait' href='http://doc.rust-lang.org/core/num/trait.ToPrimitive.html' title='core::num::ToPrimitive'>ToPrimitive</a>&gt;(n: T) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>&gt;</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/num/trait.ToPrimitive.html' title='core::num::ToPrimitive'>ToPrimitive</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.to_i64' class='method'><code>fn <a href='#method.to_i64' class='fnname'>to_i64</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.i64.html'>i64</a>&gt;</code></h4>
+<h4 id='method.to_u64' class='method'><code>fn <a href='#method.to_u64' class='fnname'>to_u64</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u64.html'>u64</a>&gt;</code></h4>
+<h4 id='method.to_f32' class='method'><code>fn <a href='#method.to_f32' class='fnname'>to_f32</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>&gt;</code></h4>
+<h4 id='method.to_f64' class='method'><code>fn <a href='#method.to_f64' class='fnname'>to_f64</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.f64.html'>f64</a>&gt;</code></h4>
+<h4 id='method.to_int' class='method'><code>fn <a href='#tymethod.to_int' class='fnname'>to_int</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.int.html'>int</a>&gt;</code></h4>
+<h4 id='method.to_i8' class='method'><code>fn <a href='#tymethod.to_i8' class='fnname'>to_i8</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.i8.html'>i8</a>&gt;</code></h4>
+<h4 id='method.to_i16' class='method'><code>fn <a href='#tymethod.to_i16' class='fnname'>to_i16</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.i16.html'>i16</a>&gt;</code></h4>
+<h4 id='method.to_i32' class='method'><code>fn <a href='#tymethod.to_i32' class='fnname'>to_i32</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.i32.html'>i32</a>&gt;</code></h4>
+<h4 id='method.to_uint' class='method'><code>fn <a href='#tymethod.to_uint' class='fnname'>to_uint</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.uint.html'>uint</a>&gt;</code></h4>
+<h4 id='method.to_u8' class='method'><code>fn <a href='#tymethod.to_u8' class='fnname'>to_u8</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u8.html'>u8</a>&gt;</code></h4>
+<h4 id='method.to_u16' class='method'><code>fn <a href='#tymethod.to_u16' class='fnname'>to_u16</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u16.html'>u16</a>&gt;</code></h4>
+<h4 id='method.to_u32' class='method'><code>fn <a href='#tymethod.to_u32' class='fnname'>to_u32</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/num/trait.Zero.html' title='core::num::Zero'>Zero</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.zero' class='method'><code>fn <a href='#method.zero' class='fnname'>zero</a>() -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.is_zero' class='method'><code>fn <a href='#method.is_zero' class='fnname'>is_zero</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.cmp' class='method'><code>fn <a href='#method.cmp' class='fnname'>cmp</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/core/cmp/type.Ordering.html' title='core::cmp::Ordering'>Ordering</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.assert_receiver_is_total_eq' class='method'><code>fn <a href='#tymethod.assert_receiver_is_total_eq' class='fnname'>assert_receiver_is_total_eq</a>(&amp;self)</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.PartialOrd.html' title='core::cmp::PartialOrd'>PartialOrd</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.lt' class='method'><code>fn <a href='#method.lt' class='fnname'>lt</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.le' class='method'><code>fn <a href='#method.le' class='fnname'>le</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.gt' class='method'><code>fn <a href='#method.gt' class='fnname'>gt</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ge' class='method'><code>fn <a href='#method.ge' class='fnname'>ge</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.eq' class='method'><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h3><div class='methods'><h4 id='method.clone' class='method'><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../util/geometry/struct.Au.html' title='util::geometry::Au'>Au</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "util";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

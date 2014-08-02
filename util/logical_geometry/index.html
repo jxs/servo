@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The util library documentation.">
+
+    <title>util::logical_geometry - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>util</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../atom/index.html'>atom</a><a class='mod ' href='../cache/index.html'>cache</a><a class='mod ' href='../debug_utils/index.html'>debug_utils</a><a class='mod ' href='../geometry/index.html'>geometry</a><a class='mod current' href='../logical_geometry/index.html'>logical_geometry</a><a class='mod ' href='../memory/index.html'>memory</a><a class='mod ' href='../namespace/index.html'>namespace</a><a class='mod ' href='../opts/index.html'>opts</a><a class='mod ' href='../range/index.html'>range</a><a class='mod ' href='../smallvec/index.html'>smallvec</a><a class='mod ' href='../sort/index.html'>sort</a><a class='mod ' href='../str/index.html'>str</a><a class='mod ' href='../task/index.html'>task</a><a class='mod ' href='../time/index.html'>time</a><a class='mod ' href='../vec/index.html'>vec</a><a class='mod ' href='../workqueue/index.html'>workqueue</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'>Module <a href='../index.html'>util</a>::<a class='mod' href=''>logical_geometry</a><a class='source' id='src-3088' href='../../src/util/home/travis/build/servo/servo/src/components/util/logical_geometry.rs.html#5-1018'>[src]</a></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='struct' href='struct.LogicalMargin.html'
+                               title='util::logical_geometry::LogicalMargin'>LogicalMargin</a></td>
+                        <td class='docblock short'><p>A &quot;margin&quot; in flow-relative dimensions
+Represents the four sides of the margins, borders, or padding of a CSS box,
+or a combination of those.
+A positive &quot;margin&quot; can be added to a rectangle to obtain a bigger rectangle.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.LogicalPoint.html'
+                               title='util::logical_geometry::LogicalPoint'>LogicalPoint</a></td>
+                        <td class='docblock short'><p>A 2D point in flow-relative dimensions</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.LogicalRect.html'
+                               title='util::logical_geometry::LogicalRect'>LogicalRect</a></td>
+                        <td class='docblock short'><p>A rectangle in flow-relative dimensions</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.LogicalSize.html'
+                               title='util::logical_geometry::LogicalSize'>LogicalSize</a></td>
+                        <td class='docblock short'><p>A 2D size in flow-relative dimensions</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.WritingMode.html'
+                               title='util::logical_geometry::WritingMode'>WritingMode</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='statics' class='section-header'><a href="#statics">Statics</a></h2>
+<table>
+                    <tr>
+                        <td><code>pub static FlagRTL: <a class='struct' href='../../util/logical_geometry/struct.WritingMode.html' title='util::logical_geometry::WritingMode'>WritingMode</a></code><code> = </code><code>BitFlags { bits: $value }</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>pub static FlagSidewaysLeft: <a class='struct' href='../../util/logical_geometry/struct.WritingMode.html' title='util::logical_geometry::WritingMode'>WritingMode</a></code><code> = </code><code>BitFlags { bits: $value }</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>pub static FlagVertical: <a class='struct' href='../../util/logical_geometry/struct.WritingMode.html' title='util::logical_geometry::WritingMode'>WritingMode</a></code><code> = </code><code>BitFlags { bits: $value }</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                
+                    <tr>
+                        <td><code>pub static FlagVerticalLR: <a class='struct' href='../../util/logical_geometry/struct.WritingMode.html' title='util::logical_geometry::WritingMode'>WritingMode</a></code><code> = </code><code>BitFlags { bits: $value }</code></td>
+                        <td class='docblock'>&nbsp;</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "util";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

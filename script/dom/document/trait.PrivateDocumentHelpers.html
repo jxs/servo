@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::document::PrivateDocumentHelpers - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>script</a>&#8203;::<a href='../index.html'>dom</a>&#8203;::<a href='index.html'>document</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Document.html'>Document</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.DocumentHelpers.html'>DocumentHelpers</a><a class='trait current' href='trait.PrivateDocumentHelpers.html'>PrivateDocumentHelpers</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'>Trait <a href='../../index.html'>script</a>::<a href='../index.html'>dom</a>::<a href='index.html'>document</a>::<a class='trait' href=''>PrivateDocumentHelpers</a><a class='source' id='src-407660' href='../../../src/script/home/travis/build/servo/servo/src/components/script/dom/document.rs.html#250-253'>[src]</a></h1>
+<pre class='rust trait'>trait PrivateDocumentHelpers {
+    fn <a href='#tymethod.createNodeList' class='fnname'>createNodeList</a>(&amp;self, callback: |node: &amp;<a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;<a class='struct' href='../../../script/dom/node/struct.Node.html' title='script::dom::node::Node'>Node</a>&gt;| -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a>) -&gt; <a class='struct' href='../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../script/dom/nodelist/struct.NodeList.html' title='script::dom::nodelist::NodeList'>NodeList</a>&gt;;
+    fn <a href='#tymethod.get_html_element' class='fnname'>get_html_element</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../script/dom/htmlhtmlelement/struct.HTMLHtmlElement.html' title='script::dom::htmlhtmlelement::HTMLHtmlElement'>HTMLHtmlElement</a>&gt;&gt;;
+}</pre>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.createNodeList' class='method'><code>fn <a href='#tymethod.createNodeList' class='fnname'>createNodeList</a>(&amp;self, callback: |node: &amp;<a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;<a class='struct' href='../../../script/dom/node/struct.Node.html' title='script::dom::node::Node'>Node</a>&gt;| -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a>) -&gt; <a class='struct' href='../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../script/dom/nodelist/struct.NodeList.html' title='script::dom::nodelist::NodeList'>NodeList</a>&gt;</code></h3><h3 id='tymethod.get_html_element' class='method'><code>fn <a href='#tymethod.get_html_element' class='fnname'>get_html_element</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../script/dom/htmlhtmlelement/struct.HTMLHtmlElement.html' title='script::dom::htmlhtmlelement::HTMLHtmlElement'>HTMLHtmlElement</a>&gt;&gt;</code></h3></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl&lt;'a&gt; <a class='trait' href='../../../script/dom/document/trait.PrivateDocumentHelpers.html' title='script::dom::document::PrivateDocumentHelpers'>PrivateDocumentHelpers</a> for <a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'a, <a class='struct' href='../../../script/dom/document/struct.Document.html' title='script::dom::document::Document'>Document</a>&gt;</code></li>
+</ul><script type="text/javascript" async
+                              src="../../../implementors/script/dom/document/trait.PrivateDocumentHelpers.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script async src="../../../search-index.js"></script>
+</body>
+</html>

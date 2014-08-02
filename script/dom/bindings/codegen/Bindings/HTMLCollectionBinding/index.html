@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::bindings::codegen::Bindings::HTMLCollectionBinding - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../../../../index.html'>script</a>&#8203;::<a href='../../../../index.html'>dom</a>&#8203;::<a href='../../../index.html'>bindings</a>&#8203;::<a href='../../index.html'>codegen</a>&#8203;::<a href='../index.html'>Bindings</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../AttrBinding/index.html'>AttrBinding</a><a class='mod ' href='../AttrListBinding/index.html'>AttrListBinding</a><a class='mod ' href='../BlobBinding/index.html'>BlobBinding</a><a class='mod ' href='../CanvasRenderingContext2DBinding/index.html'>CanvasRenderingContext2DBinding</a><a class='mod ' href='../CharacterDataBinding/index.html'>CharacterDataBinding</a><a class='mod ' href='../ClientRectBinding/index.html'>ClientRectBinding</a><a class='mod ' href='../ClientRectListBinding/index.html'>ClientRectListBinding</a><a class='mod ' href='../CommentBinding/index.html'>CommentBinding</a><a class='mod ' href='../ConsoleBinding/index.html'>ConsoleBinding</a><a class='mod ' href='../CustomEventBinding/index.html'>CustomEventBinding</a><a class='mod ' href='../DOMExceptionBinding/index.html'>DOMExceptionBinding</a><a class='mod ' href='../DOMImplementationBinding/index.html'>DOMImplementationBinding</a><a class='mod ' href='../DOMParserBinding/index.html'>DOMParserBinding</a><a class='mod ' href='../DOMTokenListBinding/index.html'>DOMTokenListBinding</a><a class='mod ' href='../DedicatedWorkerGlobalScopeBinding/index.html'>DedicatedWorkerGlobalScopeBinding</a><a class='mod ' href='../DocumentBinding/index.html'>DocumentBinding</a><a class='mod ' href='../DocumentFragmentBinding/index.html'>DocumentFragmentBinding</a><a class='mod ' href='../DocumentTypeBinding/index.html'>DocumentTypeBinding</a><a class='mod ' href='../ElementBinding/index.html'>ElementBinding</a><a class='mod ' href='../EventBinding/index.html'>EventBinding</a><a class='mod ' href='../EventHandlerBinding/index.html'>EventHandlerBinding</a><a class='mod ' href='../EventListenerBinding/index.html'>EventListenerBinding</a><a class='mod ' href='../EventTargetBinding/index.html'>EventTargetBinding</a><a class='mod ' href='../FileBinding/index.html'>FileBinding</a><a class='mod ' href='../FormDataBinding/index.html'>FormDataBinding</a><a class='mod ' href='../HTMLAnchorElementBinding/index.html'>HTMLAnchorElementBinding</a><a class='mod ' href='../HTMLAppletElementBinding/index.html'>HTMLAppletElementBinding</a><a class='mod ' href='../HTMLAreaElementBinding/index.html'>HTMLAreaElementBinding</a><a class='mod ' href='../HTMLAudioElementBinding/index.html'>HTMLAudioElementBinding</a><a class='mod ' href='../HTMLBRElementBinding/index.html'>HTMLBRElementBinding</a><a class='mod ' href='../HTMLBaseElementBinding/index.html'>HTMLBaseElementBinding</a><a class='mod ' href='../HTMLBodyElementBinding/index.html'>HTMLBodyElementBinding</a><a class='mod ' href='../HTMLButtonElementBinding/index.html'>HTMLButtonElementBinding</a><a class='mod ' href='../HTMLCanvasElementBinding/index.html'>HTMLCanvasElementBinding</a><a class='mod current' href='../HTMLCollectionBinding/index.html'>HTMLCollectionBinding</a><a class='mod ' href='../HTMLDListElementBinding/index.html'>HTMLDListElementBinding</a><a class='mod ' href='../HTMLDataElementBinding/index.html'>HTMLDataElementBinding</a><a class='mod ' href='../HTMLDataListElementBinding/index.html'>HTMLDataListElementBinding</a><a class='mod ' href='../HTMLDirectoryElementBinding/index.html'>HTMLDirectoryElementBinding</a><a class='mod ' href='../HTMLDivElementBinding/index.html'>HTMLDivElementBinding</a><a class='mod ' href='../HTMLElementBinding/index.html'>HTMLElementBinding</a><a class='mod ' href='../HTMLEmbedElementBinding/index.html'>HTMLEmbedElementBinding</a><a class='mod ' href='../HTMLFieldSetElementBinding/index.html'>HTMLFieldSetElementBinding</a><a class='mod ' href='../HTMLFontElementBinding/index.html'>HTMLFontElementBinding</a><a class='mod ' href='../HTMLFormElementBinding/index.html'>HTMLFormElementBinding</a><a class='mod ' href='../HTMLFrameElementBinding/index.html'>HTMLFrameElementBinding</a><a class='mod ' href='../HTMLFrameSetElementBinding/index.html'>HTMLFrameSetElementBinding</a><a class='mod ' href='../HTMLHRElementBinding/index.html'>HTMLHRElementBinding</a><a class='mod ' href='../HTMLHeadElementBinding/index.html'>HTMLHeadElementBinding</a><a class='mod ' href='../HTMLHeadingElementBinding/index.html'>HTMLHeadingElementBinding</a><a class='mod ' href='../HTMLHtmlElementBinding/index.html'>HTMLHtmlElementBinding</a><a class='mod ' href='../HTMLIFrameElementBinding/index.html'>HTMLIFrameElementBinding</a><a class='mod ' href='../HTMLImageElementBinding/index.html'>HTMLImageElementBinding</a><a class='mod ' href='../HTMLInputElementBinding/index.html'>HTMLInputElementBinding</a><a class='mod ' href='../HTMLLIElementBinding/index.html'>HTMLLIElementBinding</a><a class='mod ' href='../HTMLLabelElementBinding/index.html'>HTMLLabelElementBinding</a><a class='mod ' href='../HTMLLegendElementBinding/index.html'>HTMLLegendElementBinding</a><a class='mod ' href='../HTMLLinkElementBinding/index.html'>HTMLLinkElementBinding</a><a class='mod ' href='../HTMLMapElementBinding/index.html'>HTMLMapElementBinding</a><a class='mod ' href='../HTMLMediaElementBinding/index.html'>HTMLMediaElementBinding</a><a class='mod ' href='../HTMLMetaElementBinding/index.html'>HTMLMetaElementBinding</a><a class='mod ' href='../HTMLMeterElementBinding/index.html'>HTMLMeterElementBinding</a><a class='mod ' href='../HTMLModElementBinding/index.html'>HTMLModElementBinding</a><a class='mod ' href='../HTMLOListElementBinding/index.html'>HTMLOListElementBinding</a><a class='mod ' href='../HTMLObjectElementBinding/index.html'>HTMLObjectElementBinding</a><a class='mod ' href='../HTMLOptGroupElementBinding/index.html'>HTMLOptGroupElementBinding</a><a class='mod ' href='../HTMLOptionElementBinding/index.html'>HTMLOptionElementBinding</a><a class='mod ' href='../HTMLOutputElementBinding/index.html'>HTMLOutputElementBinding</a><a class='mod ' href='../HTMLParagraphElementBinding/index.html'>HTMLParagraphElementBinding</a><a class='mod ' href='../HTMLParamElementBinding/index.html'>HTMLParamElementBinding</a><a class='mod ' href='../HTMLPreElementBinding/index.html'>HTMLPreElementBinding</a><a class='mod ' href='../HTMLProgressElementBinding/index.html'>HTMLProgressElementBinding</a><a class='mod ' href='../HTMLQuoteElementBinding/index.html'>HTMLQuoteElementBinding</a><a class='mod ' href='../HTMLScriptElementBinding/index.html'>HTMLScriptElementBinding</a><a class='mod ' href='../HTMLSelectElementBinding/index.html'>HTMLSelectElementBinding</a><a class='mod ' href='../HTMLSourceElementBinding/index.html'>HTMLSourceElementBinding</a><a class='mod ' href='../HTMLSpanElementBinding/index.html'>HTMLSpanElementBinding</a><a class='mod ' href='../HTMLStyleElementBinding/index.html'>HTMLStyleElementBinding</a><a class='mod ' href='../HTMLTableCaptionElementBinding/index.html'>HTMLTableCaptionElementBinding</a><a class='mod ' href='../HTMLTableCellElementBinding/index.html'>HTMLTableCellElementBinding</a><a class='mod ' href='../HTMLTableColElementBinding/index.html'>HTMLTableColElementBinding</a><a class='mod ' href='../HTMLTableDataCellElementBinding/index.html'>HTMLTableDataCellElementBinding</a><a class='mod ' href='../HTMLTableElementBinding/index.html'>HTMLTableElementBinding</a><a class='mod ' href='../HTMLTableHeaderCellElementBinding/index.html'>HTMLTableHeaderCellElementBinding</a><a class='mod ' href='../HTMLTableRowElementBinding/index.html'>HTMLTableRowElementBinding</a><a class='mod ' href='../HTMLTableSectionElementBinding/index.html'>HTMLTableSectionElementBinding</a><a class='mod ' href='../HTMLTemplateElementBinding/index.html'>HTMLTemplateElementBinding</a><a class='mod ' href='../HTMLTextAreaElementBinding/index.html'>HTMLTextAreaElementBinding</a><a class='mod ' href='../HTMLTimeElementBinding/index.html'>HTMLTimeElementBinding</a><a class='mod ' href='../HTMLTitleElementBinding/index.html'>HTMLTitleElementBinding</a><a class='mod ' href='../HTMLTrackElementBinding/index.html'>HTMLTrackElementBinding</a><a class='mod ' href='../HTMLUListElementBinding/index.html'>HTMLUListElementBinding</a><a class='mod ' href='../HTMLUnknownElementBinding/index.html'>HTMLUnknownElementBinding</a><a class='mod ' href='../HTMLVideoElementBinding/index.html'>HTMLVideoElementBinding</a><a class='mod ' href='../LocationBinding/index.html'>LocationBinding</a><a class='mod ' href='../MessageEventBinding/index.html'>MessageEventBinding</a><a class='mod ' href='../MouseEventBinding/index.html'>MouseEventBinding</a><a class='mod ' href='../NavigatorBinding/index.html'>NavigatorBinding</a><a class='mod ' href='../NodeBinding/index.html'>NodeBinding</a><a class='mod ' href='../NodeListBinding/index.html'>NodeListBinding</a><a class='mod ' href='../PerformanceBinding/index.html'>PerformanceBinding</a><a class='mod ' href='../PerformanceTimingBinding/index.html'>PerformanceTimingBinding</a><a class='mod ' href='../ProcessingInstructionBinding/index.html'>ProcessingInstructionBinding</a><a class='mod ' href='../ProgressEventBinding/index.html'>ProgressEventBinding</a><a class='mod ' href='../ScreenBinding/index.html'>ScreenBinding</a><a class='mod ' href='../TestBindingBinding/index.html'>TestBindingBinding</a><a class='mod ' href='../TextBinding/index.html'>TextBinding</a><a class='mod ' href='../UIEventBinding/index.html'>UIEventBinding</a><a class='mod ' href='../URLSearchParamsBinding/index.html'>URLSearchParamsBinding</a><a class='mod ' href='../ValidityStateBinding/index.html'>ValidityStateBinding</a><a class='mod ' href='../WindowBinding/index.html'>WindowBinding</a><a class='mod ' href='../WorkerBinding/index.html'>WorkerBinding</a><a class='mod ' href='../WorkerGlobalScopeBinding/index.html'>WorkerGlobalScopeBinding</a><a class='mod ' href='../XMLHttpRequestBinding/index.html'>XMLHttpRequestBinding</a><a class='mod ' href='../XMLHttpRequestEventTargetBinding/index.html'>XMLHttpRequestEventTargetBinding</a><a class='mod ' href='../XMLHttpRequestUploadBinding/index.html'>XMLHttpRequestUploadBinding</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'>Module <a href='../../../../../index.html'>script</a>::<a href='../../../../index.html'>dom</a>::<a href='../../../index.html'>bindings</a>::<a href='../../index.html'>codegen</a>::<a href='../index.html'>Bindings</a>::<a class='mod' href=''>HTMLCollectionBinding</a><a class='source' id='src-118705' href='../../../../../../src/script/home/travis/build/servo/servo/src/components/script/dom/bindings/codegen/Bindings/HTMLCollectionBinding.rs.html#3-572'>[src]</a></h1>
+<h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                    <tr>
+                        <td><a class='trait' href='trait.HTMLCollectionMethods.html'
+                               title='script::dom::bindings::codegen::Bindings::HTMLCollectionBinding::HTMLCollectionMethods'>HTMLCollectionMethods</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='fn' href='fn.DefineDOMInterface.html'
+                               title='script::dom::bindings::codegen::Bindings::HTMLCollectionBinding::DefineDOMInterface'>DefineDOMInterface</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.DefineProxyHandler.html'
+                               title='script::dom::bindings::codegen::Bindings::HTMLCollectionBinding::DefineProxyHandler'>DefineProxyHandler</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.GetProtoObject.html'
+                               title='script::dom::bindings::codegen::Bindings::HTMLCollectionBinding::GetProtoObject'>GetProtoObject</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.Wrap.html'
+                               title='script::dom::bindings::codegen::Bindings::HTMLCollectionBinding::Wrap'>Wrap</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../../../jquery.js"></script>
+    <script src="../../../../../../main.js"></script>
+    
+    <script async src="../../../../../../search-index.js"></script>
+</body>
+</html>

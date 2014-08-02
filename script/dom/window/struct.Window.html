@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::window::Window - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>script</a>&#8203;::<a href='../index.html'>dom</a>&#8203;::<a href='index.html'>window</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.TimerData.html'>TimerData</a><a class='struct ' href='struct.TimerHandle.html'>TimerHandle</a><a class='struct ' href='struct.TimerId.html'>TimerId</a><a class='struct current' href='struct.Window.html'>Window</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.PrivateWindowHelpers.html'>PrivateWindowHelpers</a><a class='trait ' href='trait.WindowHelpers.html'>WindowHelpers</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'>Struct <a href='../../index.html'>script</a>::<a href='../index.html'>dom</a>::<a href='index.html'>window</a>::<a class='struct' href=''>Window</a><a class='source' id='src-464125' href='../../../src/script/home/travis/build/servo/servo/src/components/script/dom/window.rs.html#73-89'>[src]</a></h1>
+<pre class='rust struct'>pub struct Window {
+    pub script_chan: <a class='struct' href='../../../script/script_task/struct.ScriptChan.html' title='script::script_task::ScriptChan'>ScriptChan</a>,
+    pub image_cache_task: <a class='struct' href='../../../net/image_cache_task/struct.ImageCacheTask.html' title='net::image_cache_task::ImageCacheTask'>ImageCacheTask</a>,
+    pub active_timers: <a class='struct' href='../../../script/dom/bindings/trace/struct.Traceable.html' title='script::dom::bindings::trace::Traceable'>Traceable</a>&lt;<a class='struct' href='http://doc.rust-lang.org/core/cell/struct.RefCell.html' title='core::cell::RefCell'>RefCell</a>&lt;<a class='struct' href='http://doc.rust-lang.org/std/collections/hashmap/struct.HashMap.html' title='std::collections::hashmap::HashMap'>HashMap</a>&lt;<a class='struct' href='../../../script/dom/window/struct.TimerId.html' title='script::dom::window::TimerId'>TimerId</a>, <a class='struct' href='../../../script/dom/window/struct.TimerHandle.html' title='script::dom::window::TimerHandle'>TimerHandle</a>&gt;&gt;&gt;,
+    pub browser_context: <a class='struct' href='../../../script/dom/bindings/trace/struct.Traceable.html' title='script::dom::bindings::trace::Traceable'>Traceable</a>&lt;<a class='struct' href='http://doc.rust-lang.org/core/cell/struct.RefCell.html' title='core::cell::RefCell'>RefCell</a>&lt;<a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../script/dom/browsercontext/struct.BrowserContext.html' title='script::dom::browsercontext::BrowserContext'>BrowserContext</a>&gt;&gt;&gt;,
+    pub page: <a class='struct' href='http://doc.rust-lang.org/alloc/rc/struct.Rc.html' title='alloc::rc::Rc'>Rc</a>&lt;<a class='struct' href='../../../script/page/struct.Page.html' title='script::page::Page'>Page</a>&gt;,
+    pub navigationStart: <a href='http://doc.rust-lang.org/std/primitive.u64.html'>u64</a>,
+    pub navigationStartPrecise: <a href='http://doc.rust-lang.org/std/primitive.f64.html'>f64</a>,
+    // some fields omitted
+}</pre><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.script_chan'><code>script_chan</code></td><td></td></tr><tr><td id='structfield.image_cache_task'><code>image_cache_task</code></td><td></td></tr><tr><td id='structfield.active_timers'><code>active_timers</code></td><td></td></tr><tr><td id='structfield.browser_context'><code>browser_context</code></td><td></td></tr><tr><td id='structfield.page'><code>page</code></td><td></td></tr><tr><td id='structfield.navigationStart'><code>navigationStart</code></td><td></td></tr><tr><td id='structfield.navigationStartPrecise'><code>navigationStartPrecise</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'><h4 id='method.get_cx' class='method'><code>fn <a href='#method.get_cx' class='fnname'>get_cx</a>(&amp;self) -&gt; *mut JSContext</code></h4>
+<h4 id='method.page' class='method'><code>fn <a href='#method.page' class='fnname'>page</a>&lt;'a&gt;(&amp;'a self) -&gt; &amp;'a <a class='struct' href='../../../script/page/struct.Page.html' title='script::page::Page'>Page</a></code></h4>
+<h4 id='method.get_url' class='method'><code>fn <a href='#method.get_url' class='fnname'>get_url</a>(&amp;self) -&gt; Url</code></h4>
+</div><h3 class='impl'><code>impl <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(cx: *mut JSContext, page: <a class='struct' href='http://doc.rust-lang.org/alloc/rc/struct.Rc.html' title='alloc::rc::Rc'>Rc</a>&lt;<a class='struct' href='../../../script/page/struct.Page.html' title='script::page::Page'>Page</a>&gt;, script_chan: <a class='struct' href='../../../script/script_task/struct.ScriptChan.html' title='script::script_task::ScriptChan'>ScriptChan</a>, compositor: <a class='struct' href='http://doc.rust-lang.org/alloc/owned/struct.Box.html' title='alloc::owned::Box'>Box</a>&lt;<a class='trait' href='../../../msg/compositor_msg/trait.ScriptListener.html' title='msg::compositor_msg::ScriptListener'>ScriptListener</a>&gt;, image_cache_task: <a class='struct' href='../../../net/image_cache_task/struct.ImageCacheTask.html' title='net::image_cache_task::ImageCacheTask'>ImageCacheTask</a>) -&gt; <a class='struct' href='../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;<a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='../../../script/dom/bindings/conversions/trait.IDLInterface.html' title='script::dom::bindings::conversions::IDLInterface'>IDLInterface</a> for <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'><h4 id='method.get_prototype_id' class='method'><code>fn <a href='#method.get_prototype_id' class='fnname'>get_prototype_id</a>(_: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;) -&gt; <a class='type' href='../../../script/dom/bindings/codegen/PrototypeList/id/type.ID.html' title='script::dom::bindings::codegen::PrototypeList::id::ID'>ID</a></code></h4>
+<h4 id='method.get_prototype_depth' class='method'><code>fn <a href='#method.get_prototype_depth' class='fnname'>get_prototype_depth</a>(_: <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a>&gt;) -&gt; <a href='http://doc.rust-lang.org/std/primitive.uint.html'>uint</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='../../../script/dom/bindings/codegen/InheritTypes/trait.EventTargetBase.html' title='script::dom::bindings::codegen::InheritTypes::EventTargetBase'>EventTargetBase</a> for <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'></div><h3 class='impl'><code>impl <a class='trait' href='../../../script/dom/bindings/codegen/InheritTypes/trait.WindowBase.html' title='script::dom::bindings::codegen::InheritTypes::WindowBase'>WindowBase</a> for <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'></div><h3 class='impl'><code>impl <a class='trait' href='../../../script/dom/bindings/codegen/InheritTypes/trait.WindowCast.html' title='script::dom::bindings::codegen::InheritTypes::WindowCast'>WindowCast</a> for <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'><h4 id='method.to_ref' class='method'><code>fn <a href='#method.to_ref' class='fnname'>to_ref</a>&lt;'a, 'b, T: <a class='trait' href='../../../script/dom/bindings/codegen/InheritTypes/trait.WindowDerived.html' title='script::dom::bindings::codegen::InheritTypes::WindowDerived'>WindowDerived</a> + <a class='trait' href='../../../script/dom/bindings/utils/trait.Reflectable.html' title='script::dom::bindings::utils::Reflectable'>Reflectable</a>&gt;(base: &amp;'a <a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'b, T&gt;) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a <a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'b, Self&gt;&gt;</code></h4>
+<h4 id='method.to_mut_ref' class='method'><code>fn <a href='#method.to_mut_ref' class='fnname'>to_mut_ref</a>&lt;'a, 'b, T: <a class='trait' href='../../../script/dom/bindings/codegen/InheritTypes/trait.WindowDerived.html' title='script::dom::bindings::codegen::InheritTypes::WindowDerived'>WindowDerived</a> + <a class='trait' href='../../../script/dom/bindings/utils/trait.Reflectable.html' title='script::dom::bindings::utils::Reflectable'>Reflectable</a>&gt;(base: &amp;'a mut <a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'b, T&gt;) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a mut <a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'b, Self&gt;&gt;</code></h4>
+<h4 id='method.from_ref' class='method'><code>fn <a href='#method.from_ref' class='fnname'>from_ref</a>&lt;'a, 'b, T: <a class='trait' href='../../../script/dom/bindings/codegen/InheritTypes/trait.WindowBase.html' title='script::dom::bindings::codegen::InheritTypes::WindowBase'>WindowBase</a>&gt;(derived: &amp;'a <a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'b, T&gt;) -&gt; &amp;'a <a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'b, Self&gt;</code></h4>
+<h4 id='method.from_mut_ref' class='method'><code>fn <a href='#method.from_mut_ref' class='fnname'>from_mut_ref</a>&lt;'a, 'b, T: <a class='trait' href='../../../script/dom/bindings/codegen/InheritTypes/trait.WindowBase.html' title='script::dom::bindings::codegen::InheritTypes::WindowBase'>WindowBase</a>&gt;(derived: &amp;'a mut <a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'b, T&gt;) -&gt; &amp;'a mut <a class='struct' href='../../../script/dom/bindings/js/struct.JSRef.html' title='script::dom::bindings::js::JSRef'>JSRef</a>&lt;'b, Self&gt;</code></h4>
+<h4 id='method.from_temporary' class='method'><code>fn <a href='#method.from_temporary' class='fnname'>from_temporary</a>&lt;T: <a class='trait' href='../../../script/dom/bindings/codegen/InheritTypes/trait.WindowBase.html' title='script::dom::bindings::codegen::InheritTypes::WindowBase'>WindowBase</a> + <a class='trait' href='../../../script/dom/bindings/utils/trait.Reflectable.html' title='script::dom::bindings::utils::Reflectable'>Reflectable</a>&gt;(derived: <a class='struct' href='../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;T&gt;) -&gt; <a class='struct' href='../../../script/dom/bindings/js/struct.Temporary.html' title='script::dom::bindings::js::Temporary'>Temporary</a>&lt;Self&gt;</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='../../../script/dom/bindings/trace/trait.JSTraceable.html' title='script::dom::bindings::trace::JSTraceable'>JSTraceable</a> for <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'><h4 id='method.trace' class='method'><code>fn <a href='#method.trace' class='fnname'>trace</a>(&amp;self, tracer: *mut JSTracer)</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'><h4 id='method.drop' class='method'><code>fn <a href='#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='../../../script/dom/bindings/utils/trait.Reflectable.html' title='script::dom::bindings::utils::Reflectable'>Reflectable</a> for <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'><h4 id='method.reflector' class='method'><code>fn <a href='#method.reflector' class='fnname'>reflector</a>&lt;'a&gt;(&amp;'a self) -&gt; &amp;'a <a class='struct' href='../../../script/dom/bindings/utils/struct.Reflector.html' title='script::dom::bindings::utils::Reflector'>Reflector</a></code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl&lt;__S: <a class='trait' href='http://doc.rust-lang.org/serialize/serialize/trait.Encoder.html' title='serialize::serialize::Encoder'>Encoder</a>&lt;__E&gt;, __E&gt; <a class='trait' href='http://doc.rust-lang.org/serialize/serialize/trait.Encodable.html' title='serialize::serialize::Encodable'>Encodable</a>&lt;__S, __E&gt; for <a class='struct' href='../../../script/dom/window/struct.Window.html' title='script::dom::window::Window'>Window</a></code></h3><div class='methods'><h4 id='method.encode' class='method'><code>fn <a href='#method.encode' class='fnname'>encode</a>(&amp;self, __arg_0: &amp;mut __S) -&gt; <a class='type' href='http://doc.rust-lang.org/core/result/type.Result.html' title='core::result::Result'>Result</a>&lt;(), __E&gt;</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script async src="../../../search-index.js"></script>
+</body>
+</html>

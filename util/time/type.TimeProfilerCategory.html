@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The util library documentation.">
+
+    <title>util::time::TimeProfilerCategory - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>util</a>&#8203;::<a href='index.html'>time</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.TimeProfiler.html'>TimeProfiler</a><a class='struct ' href='struct.TimeProfilerChan.html'>TimeProfilerChan</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.profile.html'>profile</a><a class='fn ' href='fn.time.html'>time</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content type">
+<h1 class='fqn'>Enum <a href='../index.html'>util</a>::<a href='index.html'>time</a>::<a class='type' href=''>TimeProfilerCategory</a><a class='source' id='src-18069' href='../../src/util/home/travis/build/servo/servo/src/components/util/time.rs.html#37-55'>[src]</a></h1>
+<pre class='rust enum'>pub enum TimeProfilerCategory {
+    CompositingCategory,
+    LayoutQueryCategory,
+    LayoutPerformCategory,
+    LayoutStyleRecalcCategory,
+    LayoutSelectorMatchCategory,
+    LayoutTreeBuilderCategory,
+    LayoutDamagePropagateCategory,
+    LayoutMainCategory,
+    LayoutParallelWarmupCategory,
+    LayoutShapingCategory,
+    LayoutDispListBuildCategory,
+    GfxRegenAvailableFontsCategory,
+    RenderingDrawingCategory,
+    RenderingPrepBuffCategory,
+    RenderingCategory,
+    NumBuckets,
+}</pre><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.CompositingCategory'><code>CompositingCategory</code></td><td></td></tr><tr><td id='variant.LayoutQueryCategory'><code>LayoutQueryCategory</code></td><td></td></tr><tr><td id='variant.LayoutPerformCategory'><code>LayoutPerformCategory</code></td><td></td></tr><tr><td id='variant.LayoutStyleRecalcCategory'><code>LayoutStyleRecalcCategory</code></td><td></td></tr><tr><td id='variant.LayoutSelectorMatchCategory'><code>LayoutSelectorMatchCategory</code></td><td></td></tr><tr><td id='variant.LayoutTreeBuilderCategory'><code>LayoutTreeBuilderCategory</code></td><td></td></tr><tr><td id='variant.LayoutDamagePropagateCategory'><code>LayoutDamagePropagateCategory</code></td><td></td></tr><tr><td id='variant.LayoutMainCategory'><code>LayoutMainCategory</code></td><td></td></tr><tr><td id='variant.LayoutParallelWarmupCategory'><code>LayoutParallelWarmupCategory</code></td><td></td></tr><tr><td id='variant.LayoutShapingCategory'><code>LayoutShapingCategory</code></td><td></td></tr><tr><td id='variant.LayoutDispListBuildCategory'><code>LayoutDispListBuildCategory</code></td><td></td></tr><tr><td id='variant.GfxRegenAvailableFontsCategory'><code>GfxRegenAvailableFontsCategory</code></td><td></td></tr><tr><td id='variant.RenderingDrawingCategory'><code>RenderingDrawingCategory</code></td><td></td></tr><tr><td id='variant.RenderingPrepBuffCategory'><code>RenderingPrepBuffCategory</code></td><td></td></tr><tr><td id='variant.RenderingCategory'><code>RenderingCategory</code></td><td></td></tr><tr><td id='variant.NumBuckets'><code>NumBuckets</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a></code></h3><div class='methods'><h4 id='method.num_buckets' class='method'><code>fn <a href='#method.num_buckets' class='fnname'>num_buckets</a>() -&gt; <a href='http://doc.rust-lang.org/std/primitive.uint.html'>uint</a></code></h4>
+<h4 id='method.format' class='method'><code>fn <a href='#method.format' class='fnname'>format</a>(self) -&gt; <a class='struct' href='http://doc.rust-lang.org/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> for <a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a></code></h3><div class='methods'><h4 id='method.cmp' class='method'><code>fn <a href='#method.cmp' class='fnname'>cmp</a>(&amp;self, __arg_0: &amp;<a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/core/cmp/type.Ordering.html' title='core::cmp::Ordering'>Ordering</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a></code></h3><div class='methods'><h4 id='method.assert_receiver_is_total_eq' class='method'><code>fn <a href='#tymethod.assert_receiver_is_total_eq' class='fnname'>assert_receiver_is_total_eq</a>(&amp;self)</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.PartialOrd.html' title='core::cmp::PartialOrd'>PartialOrd</a> for <a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a></code></h3><div class='methods'><h4 id='method.lt' class='method'><code>fn <a href='#method.lt' class='fnname'>lt</a>(&amp;self, __arg_0: &amp;<a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.le' class='method'><code>fn <a href='#method.le' class='fnname'>le</a>(&amp;self, __arg_0: &amp;<a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.gt' class='method'><code>fn <a href='#method.gt' class='fnname'>gt</a>(&amp;self, __arg_0: &amp;<a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ge' class='method'><code>fn <a href='#method.ge' class='fnname'>ge</a>(&amp;self, __arg_0: &amp;<a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a></code></h3><div class='methods'><h4 id='method.clone' class='method'><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a></code></h3><div class='methods'><h4 id='method.eq' class='method'><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='type' href='../../util/time/type.TimeProfilerCategory.html' title='util::time::TimeProfilerCategory'>TimeProfilerCategory</a>) -&gt; <a href='http://doc.rust-lang.org/std/primitive.bool.html'>bool</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "util";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

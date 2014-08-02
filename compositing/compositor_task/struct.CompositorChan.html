@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The compositing library documentation.">
+
+    <title>compositing::compositor_task::CompositorChan - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>compositing</a>&#8203;::<a href='index.html'>compositor_task</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.CompositorChan.html'>CompositorChan</a><a class='struct ' href='struct.CompositorTask.html'>CompositorTask</a><a class='struct ' href='struct.LayerProperties.html'>LayerProperties</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'>Struct <a href='../index.html'>compositing</a>::<a href='index.html'>compositor_task</a>::<a class='struct' href=''>CompositorChan</a><a class='source' id='src-67' href='../../src/compositing/home/travis/build/servo/servo/src/components/compositing/compositor_task.rs.html#34-37'>[src]</a></h1>
+<pre class='rust struct'>pub struct CompositorChan {
+    pub chan: <a class='struct' href='http://doc.rust-lang.org/sync/comm/struct.Sender.html' title='sync::comm::Sender'>Sender</a>&lt;<a class='type' href='../../compositing/compositor_task/type.Msg.html' title='compositing::compositor_task::Msg'>Msg</a>&gt;,
+}</pre><div class='docblock'><p>The implementation of the layers-based compositor.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.chan'><code>chan</code></td><td><div class='docblock'><p>A channel on which messages can be sent to the compositor.</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../compositing/compositor_task/struct.CompositorChan.html' title='compositing::compositor_task::CompositorChan'>CompositorChan</a></code></h3><div class='methods'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a href='http://doc.rust-lang.org/std/primitive.tuple.html'>(<a class='struct' href='http://doc.rust-lang.org/sync/comm/struct.Receiver.html' title='sync::comm::Receiver'>Receiver</a>&lt;<a class='type' href='../../compositing/compositor_task/type.Msg.html' title='compositing::compositor_task::Msg'>Msg</a>&gt;, <a class='struct' href='../../compositing/compositor_task/struct.CompositorChan.html' title='compositing::compositor_task::CompositorChan'>CompositorChan</a>)</a></code></h4>
+<h4 id='method.send' class='method'><code>fn <a href='#method.send' class='fnname'>send</a>(&amp;self, msg: <a class='type' href='../../compositing/compositor_task/type.Msg.html' title='compositing::compositor_task::Msg'>Msg</a>)</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='../../msg/compositor_msg/trait.ScriptListener.html' title='msg::compositor_msg::ScriptListener'>ScriptListener</a> for <a class='struct' href='../../compositing/compositor_task/struct.CompositorChan.html' title='compositing::compositor_task::CompositorChan'>CompositorChan</a></code></h3><div class='docblock'><p>Implementation of the abstract <code>ScriptListener</code> interface.</p>
+</div><div class='methods'><h4 id='method.set_ready_state' class='method'><code>fn <a href='#method.set_ready_state' class='fnname'>set_ready_state</a>(&amp;self, ready_state: <a class='type' href='../../msg/compositor_msg/type.ReadyState.html' title='msg::compositor_msg::ReadyState'>ReadyState</a>)</code></h4>
+<h4 id='method.scroll_fragment_point' class='method'><code>fn <a href='#method.scroll_fragment_point' class='fnname'>scroll_fragment_point</a>(&amp;self, pipeline_id: <a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, layer_id: <a class='struct' href='../../msg/compositor_msg/struct.LayerId.html' title='msg::compositor_msg::LayerId'>LayerId</a>, point: Point2D&lt;<a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>&gt;)</code></h4>
+<h4 id='method.close' class='method'><code>fn <a href='#method.close' class='fnname'>close</a>(&amp;self)</code></h4>
+<h4 id='method.dup' class='method'><code>fn <a href='#method.dup' class='fnname'>dup</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/alloc/owned/struct.Box.html' title='alloc::owned::Box'>Box</a>&lt;<a class='trait' href='../../msg/compositor_msg/trait.ScriptListener.html' title='msg::compositor_msg::ScriptListener'>ScriptListener</a>&gt;</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='../../msg/compositor_msg/trait.RenderListener.html' title='msg::compositor_msg::RenderListener'>RenderListener</a> for <a class='struct' href='../../compositing/compositor_task/struct.CompositorChan.html' title='compositing::compositor_task::CompositorChan'>CompositorChan</a></code></h3><div class='docblock'><p>Implementation of the abstract <code>RenderListener</code> interface.</p>
+</div><div class='methods'><h4 id='method.get_graphics_metadata' class='method'><code>fn <a href='#method.get_graphics_metadata' class='fnname'>get_graphics_metadata</a>(&amp;self) -&gt; <a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;NativeGraphicsMetadata&gt;</code></h4>
+<h4 id='method.paint' class='method'><code>fn <a href='#method.paint' class='fnname'>paint</a>(&amp;self, pipeline_id: <a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, epoch: <a class='struct' href='../../msg/compositor_msg/struct.Epoch.html' title='msg::compositor_msg::Epoch'>Epoch</a>, replies: <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.tuple.html'>(<a class='struct' href='../../msg/compositor_msg/struct.LayerId.html' title='msg::compositor_msg::LayerId'>LayerId</a>, <a class='struct' href='http://doc.rust-lang.org/alloc/owned/struct.Box.html' title='alloc::owned::Box'>Box</a>&lt;LayerBufferSet&gt;)</a>&gt;)</code></h4>
+<h4 id='method.initialize_layers_for_pipeline' class='method'><code>fn <a href='#method.initialize_layers_for_pipeline' class='fnname'>initialize_layers_for_pipeline</a>(&amp;self, pipeline_id: <a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, metadata: <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../msg/compositor_msg/struct.LayerMetadata.html' title='msg::compositor_msg::LayerMetadata'>LayerMetadata</a>&gt;, epoch: <a class='struct' href='../../msg/compositor_msg/struct.Epoch.html' title='msg::compositor_msg::Epoch'>Epoch</a>)</code></h4>
+<h4 id='method.rerendermsg_discarded' class='method'><code>fn <a href='#method.rerendermsg_discarded' class='fnname'>rerendermsg_discarded</a>(&amp;self)</code></h4>
+<h4 id='method.set_layer_clip_rect' class='method'><code>fn <a href='#method.set_layer_clip_rect' class='fnname'>set_layer_clip_rect</a>(&amp;self, pipeline_id: <a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, layer_id: <a class='struct' href='../../msg/compositor_msg/struct.LayerId.html' title='msg::compositor_msg::LayerId'>LayerId</a>, new_rect: Rect&lt;<a href='http://doc.rust-lang.org/std/primitive.uint.html'>uint</a>&gt;)</code></h4>
+<h4 id='method.set_render_state' class='method'><code>fn <a href='#method.set_render_state' class='fnname'>set_render_state</a>(&amp;self, render_state: <a class='type' href='../../msg/compositor_msg/type.RenderState.html' title='msg::compositor_msg::RenderState'>RenderState</a>)</code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../compositing/compositor_task/struct.CompositorChan.html' title='compositing::compositor_task::CompositorChan'>CompositorChan</a></code></h3><div class='methods'><h4 id='method.clone' class='method'><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../compositing/compositor_task/struct.CompositorChan.html' title='compositing::compositor_task::CompositorChan'>CompositorChan</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "compositing";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

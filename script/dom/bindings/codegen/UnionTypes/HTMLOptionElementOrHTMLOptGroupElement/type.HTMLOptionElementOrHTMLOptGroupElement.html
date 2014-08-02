@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::bindings::codegen::UnionTypes::HTMLOptionElementOrHTMLOptGroupElement::HTMLOptionElementOrHTMLOptGroupElement - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../../../../index.html'>script</a>&#8203;::<a href='../../../../index.html'>dom</a>&#8203;::<a href='../../../index.html'>bindings</a>&#8203;::<a href='../../index.html'>codegen</a>&#8203;::<a href='../index.html'>UnionTypes</a>&#8203;::<a href='index.html'>HTMLOptionElementOrHTMLOptGroupElement</a></p>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content type">
+<h1 class='fqn'>Enum <a href='../../../../../index.html'>script</a>::<a href='../../../../index.html'>dom</a>::<a href='../../../index.html'>bindings</a>::<a href='../../index.html'>codegen</a>::<a href='../index.html'>UnionTypes</a>::<a href='index.html'>HTMLOptionElementOrHTMLOptGroupElement</a>::<a class='type' href=''>HTMLOptionElementOrHTMLOptGroupElement</a><a class='source' id='src-399201' href='../../../../../../src/script/home/travis/build/servo/servo/src/components/script/dom/bindings/codegen/UnionTypes.rs.html#301-304'>[src]</a></h1>
+<pre class='rust enum'>pub enum HTMLOptionElementOrHTMLOptGroupElement {
+    eHTMLOptionElement(<a class='struct' href='../../../../../../script/dom/bindings/js/struct.JS.html' title='script::dom::bindings::js::JS'>JS</a>&lt;<a class='struct' href='../../../../../../script/dom/htmloptionelement/struct.HTMLOptionElement.html' title='script::dom::htmloptionelement::HTMLOptionElement'>HTMLOptionElement</a>&gt;),
+    eHTMLOptGroupElement(<a class='struct' href='../../../../../../script/dom/bindings/js/struct.JS.html' title='script::dom::bindings::js::JS'>JS</a>&lt;<a class='struct' href='../../../../../../script/dom/htmloptgroupelement/struct.HTMLOptGroupElement.html' title='script::dom::htmloptgroupelement::HTMLOptGroupElement'>HTMLOptGroupElement</a>&gt;),
+}</pre><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.eHTMLOptionElement'><code>eHTMLOptionElement</code></td><td></td></tr><tr><td id='variant.eHTMLOptGroupElement'><code>eHTMLOptGroupElement</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='../../../../../../script/dom/bindings/conversions/trait.ToJSValConvertible.html' title='script::dom::bindings::conversions::ToJSValConvertible'>ToJSValConvertible</a> for <a class='type' href='../../../../../../script/dom/bindings/codegen/UnionTypes/HTMLOptionElementOrHTMLOptGroupElement/type.HTMLOptionElementOrHTMLOptGroupElement.html' title='script::dom::bindings::codegen::UnionTypes::HTMLOptionElementOrHTMLOptGroupElement::HTMLOptionElementOrHTMLOptGroupElement'>HTMLOptionElementOrHTMLOptGroupElement</a></code></h3><div class='methods'><h4 id='method.to_jsval' class='method'><code>fn <a href='#method.to_jsval' class='fnname'>to_jsval</a>(&amp;self, cx: *mut JSContext) -&gt; JSVal</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='../../../../../../script/dom/bindings/conversions/trait.FromJSValConvertible.html' title='script::dom::bindings::conversions::FromJSValConvertible'>FromJSValConvertible</a>&lt;()&gt; for <a class='type' href='../../../../../../script/dom/bindings/codegen/UnionTypes/HTMLOptionElementOrHTMLOptGroupElement/type.HTMLOptionElementOrHTMLOptGroupElement.html' title='script::dom::bindings::codegen::UnionTypes::HTMLOptionElementOrHTMLOptGroupElement::HTMLOptionElementOrHTMLOptGroupElement'>HTMLOptionElementOrHTMLOptGroupElement</a></code></h3><div class='methods'><h4 id='method.from_jsval' class='method'><code>fn <a href='#method.from_jsval' class='fnname'>from_jsval</a>(cx: *mut JSContext, value: JSVal, _option: ()) -&gt; <a class='type' href='http://doc.rust-lang.org/core/result/type.Result.html' title='core::result::Result'>Result</a>&lt;<a class='type' href='../../../../../../script/dom/bindings/codegen/UnionTypes/HTMLOptionElementOrHTMLOptGroupElement/type.HTMLOptionElementOrHTMLOptGroupElement.html' title='script::dom::bindings::codegen::UnionTypes::HTMLOptionElementOrHTMLOptGroupElement::HTMLOptionElementOrHTMLOptGroupElement'>HTMLOptionElementOrHTMLOptGroupElement</a>, ()&gt;</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../../../jquery.js"></script>
+    <script src="../../../../../../main.js"></script>
+    
+    <script async src="../../../../../../search-index.js"></script>
+</body>
+</html>

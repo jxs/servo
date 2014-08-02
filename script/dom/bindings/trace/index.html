@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The script library documentation.">
+
+    <title>script::dom::bindings::trace - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>script</a>&#8203;::<a href='../../index.html'>dom</a>&#8203;::<a href='../index.html'>bindings</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../callback/index.html'>callback</a><a class='mod ' href='../codegen/index.html'>codegen</a><a class='mod ' href='../conversions/index.html'>conversions</a><a class='mod ' href='../error/index.html'>error</a><a class='mod ' href='../global/index.html'>global</a><a class='mod ' href='../js/index.html'>js</a><a class='mod ' href='../str/index.html'>str</a><a class='mod current' href='../trace/index.html'>trace</a><a class='mod ' href='../utils/index.html'>utils</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'>Module <a href='../../../index.html'>script</a>::<a href='../../index.html'>dom</a>::<a href='../index.html'>bindings</a>::<a class='mod' href=''>trace</a><a class='source' id='src-14598' href='../../../../src/script/home/travis/build/servo/servo/src/components/script/dom/bindings/trace.rs.html#5-207'>[src]</a></h1>
+<div class='docblock'><p>Utilities for tracing JS-managed values.</p>
+
+<p>The lifetime of DOM objects is managed by the SpiderMonkey Garbage
+Collector. A rooted DOM object implementing the interface <code>Foo</code> is traced
+as follows:</p>
+
+<ol>
+<li>The GC calls <code>_trace</code> defined in <code>FooBinding</code> during the marking
+phase. (This happens through <code>JSClass.trace</code> for non-proxy bindings, and
+through <code>ProxyTraps.trace</code> otherwise.)</li>
+<li><code>_trace</code> calls <code>Foo::trace()</code> (an implementation of <code>JSTraceable</code>,
+defined in <code>InheritTypes.rs</code>).</li>
+<li><code>Foo::trace()</code> calls <code>Foo::encode()</code> (an implementation of <code>Encodable</code>).
+This implementation is typically derived by a <code>#[deriving(Encodable)]</code>
+annotation on the Rust struct.</li>
+<li><p>For all fields (except those wrapped in <code>Untraceable</code>), <code>Foo::encode()</code>
+calls <code>encode()</code> on the field.</p>
+
+<p>For example, for fields of type <code>JS&lt;T&gt;</code>, <code>JS&lt;T&gt;::encode()</code> calls
+<code>trace_reflector()</code>.</p></li>
+<li><p><code>trace_reflector()</code> calls <code>trace_object()</code> with the <code>JSObject</code> for the
+reflector.</p></li>
+<li><p><code>trace_object()</code> calls <code>JS_CallTracer()</code> to notify the GC, which will
+add the object to the graph, and will trace that object as well.</p></li>
+</ol>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='struct' href='struct.Traceable.html'
+                               title='script::dom::bindings::trace::Traceable'>Traceable</a></td>
+                        <td class='docblock short'><p>Encapsulates a type that can be traced but is boxed in a type we don&#39;t
+control (such as <code>RefCell</code>).</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='struct' href='struct.Untraceable.html'
+                               title='script::dom::bindings::trace::Untraceable'>Untraceable</a></td>
+                        <td class='docblock short'><p>Encapsulates a type that cannot easily have <code>Encodable</code> derived automagically,
+but also does not need to be made known to the SpiderMonkey garbage collector.</p>
+</td>
+                    </tr>
+                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                    <tr>
+                        <td><a class='trait' href='trait.JSTraceable.html'
+                               title='script::dom::bindings::trace::JSTraceable'>JSTraceable</a></td>
+                        <td class='docblock short'><p>A trait to allow tracing (only) DOM objects.</p>
+</td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='fn' href='fn.trace_jsval.html'
+                               title='script::dom::bindings::trace::trace_jsval'>trace_jsval</a></td>
+                        <td class='docblock short'><p>Trace a <code>JSVal</code>.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.trace_object.html'
+                               title='script::dom::bindings::trace::trace_object'>trace_object</a></td>
+                        <td class='docblock short'><p>Trace a <code>JSObject</code>.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='fn' href='fn.trace_reflector.html'
+                               title='script::dom::bindings::trace::trace_reflector'>trace_reflector</a></td>
+                        <td class='docblock short'><p>Trace the <code>JSObject</code> held by <code>reflector</code>.</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "script";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    
+    <script async src="../../../../search-index.js"></script>
+</body>
+</html>

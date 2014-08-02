@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The compositing library documentation.">
+
+    <title>compositing::compositor_task::Msg - Rust</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+</head>
+<body>
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>compositing</a>&#8203;::<a href='index.html'>compositor_task</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.CompositorChan.html'>CompositorChan</a><a class='struct ' href='struct.CompositorTask.html'>CompositorTask</a><a class='struct ' href='struct.LayerProperties.html'>LayerProperties</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Search documentation..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content type">
+<h1 class='fqn'>Enum <a href='../index.html'>compositing</a>::<a href='index.html'>compositor_task</a>::<a class='type' href=''>Msg</a><a class='source' id='src-562' href='../../src/compositing/home/travis/build/servo/servo/src/components/compositing/compositor_task.rs.html#159-197'>[src]</a></h1>
+<pre class='rust enum'>pub enum Msg {
+    Exit(<a class='struct' href='http://doc.rust-lang.org/sync/comm/struct.Sender.html' title='sync::comm::Sender'>Sender</a>&lt;()&gt;),
+    ShutdownComplete,
+    GetGraphicsMetadata(<a class='struct' href='http://doc.rust-lang.org/sync/comm/struct.Sender.html' title='sync::comm::Sender'>Sender</a>&lt;<a class='type' href='http://doc.rust-lang.org/core/option/type.Option.html' title='core::option::Option'>Option</a>&lt;NativeGraphicsMetadata&gt;&gt;),
+    CreateOrUpdateRootLayer(<a class='struct' href='../../compositing/compositor_task/struct.LayerProperties.html' title='compositing::compositor_task::LayerProperties'>LayerProperties</a>),
+    CreateOrUpdateDescendantLayer(<a class='struct' href='../../compositing/compositor_task/struct.LayerProperties.html' title='compositing::compositor_task::LayerProperties'>LayerProperties</a>),
+    SetLayerClipRect(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, <a class='struct' href='../../msg/compositor_msg/struct.LayerId.html' title='msg::compositor_msg::LayerId'>LayerId</a>, Rect&lt;<a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>&gt;),
+    ScrollFragmentPoint(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, <a class='struct' href='../../msg/compositor_msg/struct.LayerId.html' title='msg::compositor_msg::LayerId'>LayerId</a>, Point2D&lt;<a href='http://doc.rust-lang.org/std/primitive.f32.html'>f32</a>&gt;),
+    Paint(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, <a class='struct' href='../../msg/compositor_msg/struct.Epoch.html' title='msg::compositor_msg::Epoch'>Epoch</a>, <a class='struct' href='http://doc.rust-lang.org/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/std/primitive.tuple.html'>(<a class='struct' href='../../msg/compositor_msg/struct.LayerId.html' title='msg::compositor_msg::LayerId'>LayerId</a>, <a class='struct' href='http://doc.rust-lang.org/alloc/owned/struct.Box.html' title='alloc::owned::Box'>Box</a>&lt;LayerBufferSet&gt;)</a>&gt;),
+    ChangeReadyState(<a class='type' href='../../msg/compositor_msg/type.ReadyState.html' title='msg::compositor_msg::ReadyState'>ReadyState</a>),
+    ChangeRenderState(<a class='type' href='../../msg/compositor_msg/type.RenderState.html' title='msg::compositor_msg::RenderState'>RenderState</a>),
+    ReRenderMsgDiscarded,
+    SetIds(<a class='struct' href='../../compositing/constellation/struct.SendableFrameTree.html' title='compositing::constellation::SendableFrameTree'>SendableFrameTree</a>, <a class='struct' href='http://doc.rust-lang.org/sync/comm/struct.Sender.html' title='sync::comm::Sender'>Sender</a>&lt;()&gt;, <a class='struct' href='../../msg/constellation_msg/struct.ConstellationChan.html' title='msg::constellation_msg::ConstellationChan'>ConstellationChan</a>),
+    LoadComplete(<a class='struct' href='../../msg/constellation_msg/struct.PipelineId.html' title='msg::constellation_msg::PipelineId'>PipelineId</a>, Url),
+}</pre><div class='docblock'><p>Messages from the painting task and the constellation task to the compositor task.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Exit'><code>Exit</code></td><td><div class='docblock'><p>Requests that the compositor shut down.</p>
+</div></td></tr><tr><td id='variant.ShutdownComplete'><code>ShutdownComplete</code></td><td><div class='docblock'><p>Informs the compositor that the constellation has completed shutdown.
+Required because the constellation can have pending calls to make (e.g. SetIds)
+at the time that we send it an ExitMsg.</p>
+</div></td></tr><tr><td id='variant.GetGraphicsMetadata'><code>GetGraphicsMetadata</code></td><td><div class='docblock'><p>Requests the compositor&#39;s graphics metadata. Graphics metadata is what the renderer needs
+to create surfaces that the compositor can see. On Linux this is the X display; on Mac this
+is the pixel format.</p>
+
+<p>The headless compositor returns <code>None</code>.</p>
+</div></td></tr><tr><td id='variant.CreateOrUpdateRootLayer'><code>CreateOrUpdateRootLayer</code></td><td><div class='docblock'><p>Tells the compositor to create the root layer for a pipeline if necessary (i.e. if no layer
+with that ID exists).</p>
+</div></td></tr><tr><td id='variant.CreateOrUpdateDescendantLayer'><code>CreateOrUpdateDescendantLayer</code></td><td><div class='docblock'><p>Tells the compositor to create a descendant layer for a pipeline if necessary (i.e. if no
+layer with that ID exists).</p>
+</div></td></tr><tr><td id='variant.SetLayerClipRect'><code>SetLayerClipRect</code></td><td><div class='docblock'><p>Alerts the compositor that the specified layer&#39;s clipping rect has changed.</p>
+</div></td></tr><tr><td id='variant.ScrollFragmentPoint'><code>ScrollFragmentPoint</code></td><td><div class='docblock'><p>Scroll a page in a window</p>
+</div></td></tr><tr><td id='variant.Paint'><code>Paint</code></td><td><div class='docblock'><p>Requests that the compositor paint the given layer buffer set for the given page size.</p>
+</div></td></tr><tr><td id='variant.ChangeReadyState'><code>ChangeReadyState</code></td><td><div class='docblock'><p>Alerts the compositor to the current status of page loading.</p>
+</div></td></tr><tr><td id='variant.ChangeRenderState'><code>ChangeRenderState</code></td><td><div class='docblock'><p>Alerts the compositor to the current status of rendering.</p>
+</div></td></tr><tr><td id='variant.ReRenderMsgDiscarded'><code>ReRenderMsgDiscarded</code></td><td><div class='docblock'><p>Alerts the compositor that the ReRenderMsg has been discarded.</p>
+</div></td></tr><tr><td id='variant.SetIds'><code>SetIds</code></td><td><div class='docblock'><p>Sets the channel to the current layout and render tasks, along with their id</p>
+</div></td></tr><tr><td id='variant.LoadComplete'><code>LoadComplete</code></td><td><div class='docblock'><p>The load of a page for a given URL has completed.</p>
+</div></td></tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&uarr;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&darr;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code> (or <code>str</code>), <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "compositing";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
